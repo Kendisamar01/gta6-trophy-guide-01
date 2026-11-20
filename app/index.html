@@ -3,77 +3,116 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101619">
-    <meta name="description" content="An offline checklist and platinum roadmap for the Grand Theft Auto VI PS5 trophies.">
-    <title>Leonida Field Guide | GTA VI Trophies</title>
+    <meta name="theme-color" content="#10130f">
+    <meta name="description" content="A fan-made, offline GTA VI trophy planner for Leonida.">
+    <title>Leonida Ledger — GTA VI Trophy Guide</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="page-shell">
+    <div class="shell">
       <header class="masthead">
-        <a class="wordmark" href="./" aria-label="Leonida Field Guide home">
+        <a class="wordmark" href="./" aria-label="Leonida Ledger home">
           <span class="mark" aria-hidden="true">L</span>
-          <span><strong>FIELD GUIDE</strong><small>LEONIDA · PS5 TROPHIES</small></span>
+          <span>LEONIDA <b>LEDGER</b></span>
         </a>
-        <div class="offline-tag"><span aria-hidden="true"></span> OFFLINE READY</div>
+        <span class="edition">FIELD NOTES / FAN EDITION</span>
       </header>
 
       <main>
-        <section class="intro" aria-labelledby="page-title">
-          <div>
-            <p class="eyebrow">A PLAYER'S ROUTE THROUGH THE STATE</p>
-            <h1 id="page-title">Make every mile<br><em>count.</em></h1>
-            <p class="intro-copy">Keep a personal record of all 55 trophies, follow a flexible platinum route, and track your progress without a network connection.</p>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="live-dot"></span> A road map for the long haul</p>
+            <h1 id="page-title">The road to<br><em>Leonida legend.</em></h1>
+            <p class="intro">Keep your own checklist, find the next smart detour, and make every trip across the state count.</p>
+            <p class="disclaimer">Unofficial fan-made planning guide. Trophy names, conditions, and rarity figures are speculative—not a verified game list.</p>
           </div>
-          <div class="intro-stamp" aria-hidden="true"><span>55</span><small>PS5 TROPHIES</small><i>01 / 06</i></div>
-        </section>
-
-        <section class="progress-card" aria-label="Trophy progress">
-          <div class="progress-copy">
-            <div class="progress-heading"><span class="eyebrow">PLATINUM RUN</span><span id="progress-label">0 / 55 earned</span></div>
-            <div class="progress-track" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0"><span id="progress-fill"></span></div>
-            <div class="progress-foot"><span id="progress-percent">0% complete</span><span>Saved on this device</span></div>
-          </div>
-          <div class="progress-emblem"><span id="earned-count">00</span><small>CHECKED OFF</small></div>
-        </section>
-
-        <section class="workspace" aria-label="Trophy guide">
-          <div class="guide-column">
-            <div class="view-bar">
-              <div class="view-switch" role="tablist" aria-label="Guide view">
-                <button id="checklist-view" class="view-button active" type="button" role="tab" aria-selected="true">Checklist</button>
-                <button id="roadmap-view" class="view-button" type="button" role="tab" aria-selected="false">Platinum roadmap</button>
-              </div>
-              <label class="spoiler-toggle"><input id="spoiler-toggle" type="checkbox"><span class="switch" aria-hidden="true"></span><span>Hide story spoilers</span></label>
+          <aside class="progress-card" aria-label="Trophy progress">
+            <div class="ring" id="progress-ring" role="img" aria-label="0 percent complete">
+              <div><strong id="percent">0%</strong><span>COMPLETE</span></div>
             </div>
-
-            <div id="checklist-pane">
-              <div class="filter-row">
-                <div id="filter-tabs" class="filter-tabs" role="group" aria-label="Filter trophies"></div>
-                <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a trophy" aria-label="Search trophies"></label>
-              </div>
-              <div class="list-meta"><span id="list-title">All trophies</span><span id="list-count">55 entries</span></div>
-              <div id="trophy-list" class="trophy-list" aria-live="polite"></div>
+            <div class="progress-copy">
+              <span class="eyebrow">YOUR JOURNEY</span>
+              <strong><span id="earned-count">0</span><small> / <span id="total-count">0</span> logged</small></strong>
+              <span class="muted" id="remaining-copy">Every story starts somewhere.</span>
             </div>
-            <div id="roadmap-pane" hidden></div>
-          </div>
-
-          <aside id="detail-panel" class="detail-panel" aria-live="polite"></aside>
+          </aside>
         </section>
 
-        <footer class="page-footer">
-          <span>Independent player-made guide · No network required</span>
-          <div class="data-actions">
-            <button id="export-button" class="text-button" type="button">Export progress <span aria-hidden="true">↗</span></button>
-            <label class="text-button import-button">Import progress <span aria-hidden="true">↗</span><input id="import-input" type="file" accept="application/json,.json"></label>
+        <section class="roadmap" aria-label="Journey milestones">
+          <div class="road-step active"><span>01</span><div><b>Story first</b><small>Follow the main road</small></div></div>
+          <div class="road-line" aria-hidden="true"></div>
+          <div class="road-step"><span>02</span><div><b>Side streets</b><small>Meet the locals</small></div></div>
+          <div class="road-line" aria-hidden="true"></div>
+          <div class="road-step"><span>03</span><div><b>Full state</b><small>Leave no corner behind</small></div></div>
+        </section>
+
+        <section class="guide" aria-labelledby="list-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THE CHECKLIST</p>
+              <h2 id="list-title">Pick your next move</h2>
+            </div>
+            <div class="data-actions">
+              <button class="button button-quiet" id="export" type="button">Export progress <span aria-hidden="true">↗</span></button>
+              <label class="button button-quiet import-button" for="import-file">Import <span aria-hidden="true">↙</span></label>
+              <input id="import-file" class="visually-hidden" type="file" accept="application/json,.json">
+            </div>
           </div>
-        </footer>
-        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+
+          <div class="toolbar">
+            <label class="searchbox">
+              <span class="visually-hidden">Search trophies and hints</span>
+              <span aria-hidden="true">⌕</span>
+              <input id="search" type="search" placeholder="Search the ledger..." autocomplete="off">
+              <kbd>/</kbd>
+            </label>
+            <label class="select-wrap">
+              <span class="visually-hidden">Filter by grade</span>
+              <select id="grade-filter">
+                <option value="all">All grades</option>
+                <option value="platinum">Platinum</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="bronze">Bronze</option>
+              </select>
+            </label>
+            <label class="select-wrap">
+              <span class="visually-hidden">Filter by progress</span>
+              <select id="status-filter">
+                <option value="all">All entries</option>
+                <option value="open">Still open</option>
+                <option value="earned">Logged</option>
+              </select>
+            </label>
+            <label class="spoiler-toggle">
+              <input id="spoiler-toggle" type="checkbox">
+              <span class="switch" aria-hidden="true"></span>
+              <span>Show hints</span>
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th scope="col">LOG</th><th scope="col">TROPHY</th><th scope="col">GRADE</th><th scope="col">RARITY*</th><th scope="col">FIELD NOTE</th></tr>
+              </thead>
+              <tbody id="trophy-rows">
+                <tr><td colspan="5" class="loading">Opening the ledger…</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="list-footer">
+            <span id="result-count">Loading entries</span>
+            <span>*Community-style estimates for planning only</span>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <span>LEONIDA LEDGER <i>·</i> MADE FOR THE MILES</span>
+        <span>Progress stays on this device.</span>
+      </footer>
     </div>
-    <script src="data/trophies.js"></script>
-    <script src="store.js"></script>
-    <script src="ui.js"></script>
-    <script src="app.js"></script>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

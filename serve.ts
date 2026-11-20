@@ -1,70 +1,72 @@
-import { createReadStream, statSync } from 'node:fs';
-import { createServer } from 'node:http';
-import { extname, join, normalize, resolve, sep } from 'node:path';
-import { fileURLToPath } from 'node:url';
+const { createReadStream, statSync } = require('node:fs');
+const { createServer } = require('node:http');
+const { extname, join, resolve, sep } = require('node:path');
 
-const webRoot = resolve(fileURLToPath(new URL('./app/', import.meta.url)));
-const portFlag = process.argv.indexOf('--port');
-const portValue = portFlag < 0 ? 8080 : Number(process.argv[portFlag + 1]);
-const port = Number.isInteger(portValue) && portValue > 0 && portValue <= 65535 ? portValue : 8080;
+const root = resolve(join(__dirname, 'app'));
+const portPosition = process.argv.indexOf('--port');
+const requestedPort = portPosition < 0 ? 8080 : Number(process.argv[portPosition + 1]);
+if (!Number.isInteger(requestedPort) || requestedPort < 1 || requestedPort > 65535) {
+  throw new RangeError('Choose a port between 1 and 65535 with --port <number>.');
+}
 
-const contentTypes: Record<string, string> = {
-  '.html': 'text/html; charset=utf-8',
-  '.js': 'text/javascript; charset=utf-8',
-  '.mjs': 'text/javascript; charset=utf-8',
-  '.css': 'text/css; charset=utf-8',
-  '.json': 'application/json; charset=utf-8',
-  '.svg': 'image/svg+xml',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.webp': 'image/webp',
-  '.ico': 'image/x-icon',
-  '.woff2': 'font/woff2',
-  '.webmanifest': 'application/manifest+json',
-};
+const contentTypes = new Map([
+  ['.html', 'text/html; charset=utf-8'],
+  ['.css', 'text/css; charset=utf-8'],
+  ['.js', 'text/javascript; charset=utf-8'],
+  ['.json', 'application/json; charset=utf-8'],
+  ['.svg', 'image/svg+xml'],
+  ['.png', 'image/png'],
+  ['.jpg', 'image/jpeg'],
+  ['.jpeg', 'image/jpeg'],
+]);
 
-const server = createServer((request, response) => {
-  let route: string;
+createServer((request, response) => {
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    response.writeHead(405, { allow: 'GET, HEAD' }).end('method not allowed');
+    return;
+  }
+
+  let pathname;
   try {
-    route = decodeURIComponent(new URL(request.url ?? '/', 'http://localhost').pathname);
+    pathname = decodeURIComponent(new URL(request.url ?? '/', 'http://localhost').pathname);
   } catch {
-    response.writeHead(400).end('Bad request');
+    response.writeHead(400).end('bad request');
     return;
   }
-  if (route.endsWith('/')) route += 'index.html';
+  if (pathname.endsWith('/')) pathname += 'index.html';
 
-  const file = resolve(join(webRoot, normalize(route)));
-  if (file !== webRoot && !file.startsWith(`${webRoot}${sep}`)) {
-    response.writeHead(403).end('Forbidden');
+  const file = resolve(join(root, `.${pathname}`));
+  if (file !== root && !file.startsWith(`${root}${sep}`)) {
+    response.writeHead(403).end('forbidden');
     return;
   }
-  let length: number;
+
+  let size;
   try {
     const info = statSync(file);
-    if (!info.isFile()) throw new Error('Requested path is not a file.');
-    length = info.size;
+    if (!info.isFile()) throw new Error('not a file');
+    size = info.size;
   } catch {
-    response.writeHead(404).end('Not found');
+    response.writeHead(404).end('not found');
     return;
   }
+
   response.writeHead(200, {
-    'content-type': contentTypes[extname(file).toLowerCase()] ?? 'application/octet-stream',
-    'content-length': length,
+    'content-type': contentTypes.get(extname(file).toLowerCase()) ?? 'application/octet-stream',
+    'content-length': size,
     'cache-control': 'no-store',
+    'x-content-type-options': 'nosniff',
   });
   if (request.method === 'HEAD') {
     response.end();
     return;
   }
   const stream = createReadStream(file);
-  stream.on('error', (error) => {
-    if (!response.headersSent) response.writeHead(500).end('Read failed');
-    else response.destroy(error);
+  stream.on('error', () => {
+    if (!response.headersSent) response.writeHead(500).end('could not read file');
+    else response.destroy();
   });
   stream.pipe(response);
-});
-
-server.listen(port, '127.0.0.1', () => {
-  console.log(`app/ is on http://localhost:${port}`);
+}).listen(requestedPort, '127.0.0.1', () => {
+  console.log(`Leonida Ledger is available at http://127.0.0.1:${requestedPort}`);
 });

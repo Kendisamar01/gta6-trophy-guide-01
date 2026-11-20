@@ -1,42 +1,20 @@
 [
   {
-    "file": "1-checklist.jpg",
-    "path": "/?filter=all&trophy=20",
-    "format": "jpeg",
-    "quality": 85,
-    "viewport": {
-      "width": 1280,
-      "height": 800
-    }
+    "file": "1-ledger.png",
+    "path": "/",
+    "viewport": { "width": 1440, "height": 960 }
   },
   {
-    "file": "2-roadmap.jpg",
-    "path": "/?view=roadmap&trophy=29",
-    "format": "jpeg",
-    "quality": 85,
-    "viewport": {
-      "width": 1280,
-      "height": 800
-    }
+    "file": "2-field-notes.png",
+    "path": "/",
+    "grade": "silver",
+    "viewport": { "width": 1280, "height": 900 }
   },
   {
-    "file": "3-guide.jpg",
-    "path": "/?view=guide&trophy=29",
-    "format": "jpeg",
-    "quality": 85,
-    "viewport": {
-      "width": 1280,
-      "height": 800
-    }
-  },
-  {
-    "file": "4-spoiler.jpg",
-    "path": "/?filter=story&spoilers=on",
-    "format": "jpeg",
-    "quality": 85,
-    "viewport": {
-      "width": 1280,
-      "height": 800
-    }
+    "file": "3-open-route.png",
+    "path": "/",
+    "grade": "bronze",
+    "scroll": 620,
+    "viewport": { "width": 1280, "height": 900 }
   }
 ]

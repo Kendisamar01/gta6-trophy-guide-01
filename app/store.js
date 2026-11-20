@@ -1,75 +1,40 @@
-(() => {
-  const storageKey = 'leonida-field-guide-progress-v1';
-  const trophies = window.GTA6_TROPHY_DATA.trophies;
-  const ids = new Set(trophies.map((trophy) => trophy.id));
-  const idByName = new Map(trophies.map((trophy) => [trophy.name, trophy.id]));
-  let earnedIds = new Set();
+const STORAGE_KEY = 'leonida-ledger.progress.v1';
 
-  function parseIds(values) {
-    if (!Array.isArray(values)) throw new TypeError('Progress must contain a list of earned trophies.');
-    return new Set(values.map((value) => {
-      if (Number.isInteger(value) && ids.has(value)) return value;
-      if (typeof value === 'string' && idByName.has(value)) return idByName.get(value);
-      throw new TypeError('The progress file contains an unknown trophy.');
-    }));
+export function readProgress(knownIds) {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return { earned: new Set(), repaired: false };
+
+  try {
+    const saved = JSON.parse(raw);
+    if (!Array.isArray(saved)) throw new TypeError('Progress must be a list.');
+    const accepted = saved.filter((id) => Number.isInteger(id) && knownIds.has(id));
+    return { earned: new Set(accepted), repaired: accepted.length !== saved.length };
+  } catch (error) {
+    if (!(error instanceof SyntaxError) && !(error instanceof TypeError)) throw error;
+    return { earned: new Set(), repaired: true };
   }
+}
 
-  function save(onError) {
-    try {
-      localStorage.setItem(storageKey, JSON.stringify([...earnedIds]));
-      return true;
-    } catch (error) {
-      onError(`Could not save on this device: ${error.message}`);
-      return false;
-    }
+export function writeProgress(earned) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify([...earned].sort((a, b) => a - b)));
+}
+
+export function parseImport(text, knownIds) {
+  const parsed = JSON.parse(text);
+  const values = Array.isArray(parsed) ? parsed : parsed?.earned;
+  if (!Array.isArray(values)) throw new TypeError('Choose a Leonida Ledger progress export.');
+
+  const accepted = values.filter((id) => Number.isInteger(id) && knownIds.has(id));
+  if (accepted.length === 0 && values.length > 0) {
+    throw new TypeError('This file has no trophy IDs in common with this guide.');
   }
+  return new Set(accepted);
+}
 
-  function load(onNotice) {
-    try {
-      const contents = localStorage.getItem(storageKey);
-      if (contents) earnedIds = parseIds(JSON.parse(contents));
-    } catch (error) {
-      earnedIds = new Set();
-      onNotice(`Saved progress could not be read; starting with an empty checklist. ${error.message}`);
-    }
-  }
-
-  function toggle(id, checked, onError) {
-    if (!ids.has(id)) throw new RangeError(`Unknown trophy id: ${id}`);
-    if (checked) earnedIds.add(id);
-    else earnedIds.delete(id);
-    save(onError);
-  }
-
-  function importText(text, onError) {
-    const previous = earnedIds;
-    try {
-      const parsed = JSON.parse(text);
-      const values = Array.isArray(parsed) ? parsed : parsed?.earned;
-      earnedIds = parseIds(values);
-      if (!save(onError)) {
-        earnedIds = previous;
-        return false;
-      }
-      return true;
-    } catch (error) {
-      earnedIds = previous;
-      onError(`Import failed: ${error.message}`);
-      return false;
-    }
-  }
-
-  window.GuideProgress = {
-    load,
-    toggle,
-    importText,
-    has: (id) => earnedIds.has(id),
-    count: () => earnedIds.size,
-    exportObject: () => ({
-      format: 'leonida-field-guide-progress',
-      version: 1,
-      savedAt: new Date().toISOString(),
-      earned: [...earnedIds].sort((left, right) => left - right),
-    }),
-  };
-})();
+export function createExport(earned) {
+  return JSON.stringify({
+    format: 'leonida-ledger-progress',
+    version: 1,
+    earned: [...earned].sort((a, b) => a - b),
+  }, null, 2);
+}

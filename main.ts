@@ -1,27 +1,37 @@
-import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { buildDossier } from './vendor/makefun-frontend.ts';
+const { cpSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } = require('node:fs');
+const { join, relative } = require('node:path');
 
-const projectRoot = fileURLToPath(new URL('.', import.meta.url));
-const outputDirectory = process.env.MAKEFUN_OUTPUT_DIR ?? join(projectRoot, 'out');
-const appDirectory = join(projectRoot, 'app');
-const imageDirectory = join(projectRoot, 'screenshots');
-const dossierLimits = {
-  text_max_bytes: 163840,
-  screenshots: { max: 4, max_bytes: 262144 },
-  app_max_files: 993,
-  app_max_bytes: 50331648,
-};
+const root = __dirname;
+const output = process.env.MAKEFUN_OUTPUT_DIR || join(root, 'out');
+const appSource = join(root, 'app');
+const appOutput = join(output, 'app');
 
-mkdirSync(outputDirectory, { recursive: true });
-cpSync(appDirectory, join(outputDirectory, 'app'), { recursive: true });
-mkdirSync(join(outputDirectory, 'screenshots'), { recursive: true });
-if (existsSync(imageDirectory)) {
-  cpSync(imageDirectory, join(outputDirectory, 'screenshots'), { recursive: true });
+function listFiles(directory) {
+  return readdirSync(directory, { withFileTypes: true })
+    .flatMap((entry) => {
+      const path = join(directory, entry.name);
+      return entry.isDirectory() ? listFiles(path) : [path];
+    })
+    .sort();
 }
 
-writeFileSync(
-  join(outputDirectory, 'dossier.json'),
-  buildDossier(outputDirectory, dossierLimits),
-);
+mkdirSync(output, { recursive: true });
+cpSync(appSource, appOutput, { recursive: true });
+
+const files = listFiles(appOutput).map((path) => ({
+  path: relative(output, path).split('\\').join('/'),
+  bytes: statSync(path).size,
+}));
+const data = JSON.parse(readFileSync(join(appOutput, 'data/trophies.json'), 'utf8'));
+
+writeFileSync(join(output, 'dossier.json'), JSON.stringify({
+  title: 'Leonida Ledger',
+  competition: 'gta6-trophy-guide-01',
+  format: 'offline-static-guide',
+  summary: 'A locally served, fan-made GTA VI trophy planner with searchable entries and saved progress.',
+  speculative: true,
+  trophyCount: data.trophies.length,
+  files,
+}, null, 2) + '\n');
+
+console.log(`Built ${files.length} offline app files and ${data.trophies.length} guide entries in ${output}`);

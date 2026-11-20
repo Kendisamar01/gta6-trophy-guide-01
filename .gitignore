@@ -1,8 +1,2 @@
-.local/
-.local-apt/
-.local-libs/
-.chromium/
-.chromium-runtime/
-.puppeteer/
-.puppeteer-cache/
-node_modules/
+out/
+.DS_Store
