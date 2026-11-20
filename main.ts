@@ -1,4 +1,4 @@
-import { cpSync, mkdirSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -7,6 +7,7 @@ const output = process.env.MAKEFUN_OUTPUT_DIR ?? join(root, 'out');
 const appOutput = join(output, 'app');
 
 mkdirSync(output, { recursive: true });
+rmSync(appOutput, { recursive: true, force: true });
 cpSync(join(root, 'app'), appOutput, { recursive: true });
 writeFileSync(
   join(output, 'build-manifest.json'),
@@ -18,4 +19,4 @@ writeFileSync(
   }, null, 2)}\n`,
 );
 
-console.log(`Built offline guide at ${appOutput}`);
+console.log(`Build complete: offline guide at ${appOutput}; manifest at ${join(output, 'build-manifest.json')}`);
