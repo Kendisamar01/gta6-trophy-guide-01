@@ -1,20 +1,21 @@
 [
   {
-    "file": "1-ledger.png",
+    "file": "1-atlas.png",
     "path": "/",
-    "viewport": { "width": 1440, "height": 960 }
-  },
-  {
-    "file": "2-field-notes.png",
-    "path": "/",
-    "grade": "silver",
+    "view": "overview",
     "viewport": { "width": 1280, "height": 900 }
   },
   {
-    "file": "3-open-route.png",
+    "file": "2-progress.png",
     "path": "/",
-    "grade": "bronze",
-    "scroll": 620,
+    "view": "progress",
+    "earned": 18,
     "viewport": { "width": 1280, "height": 900 }
+  },
+  {
+    "file": "3-mobile.png",
+    "path": "/",
+    "view": "mobile",
+    "viewport": { "width": 390, "height": 844 }
   }
 ]

@@ -1,19 +1,15 @@
-import { readFileSync } from 'node:fs';
-
-const shots = JSON.parse(readFileSync(new URL('./shots.json', import.meta.url), 'utf8'));
-if (!Array.isArray(shots) || shots.length < 1 || shots.length > 4) {
-  throw new TypeError('The shot manifest must contain between one and four views.');
-}
+import capturePlan from './shots.json' with { type: 'json' };
 
 const names = new Set();
-for (const shot of shots) {
-  if (!shot || typeof shot.file !== 'string' || !shot.file.endsWith('.png')
-    || typeof shot.path !== 'string' || !shot.path.startsWith('/')
-    || !Number.isInteger(shot.viewport?.width) || !Number.isInteger(shot.viewport?.height)) {
-    throw new TypeError('Each shot needs a PNG name, a local route, and integer viewport dimensions.');
+for (const shot of capturePlan) {
+  if (!shot.file || !shot.path?.startsWith('/') || !Number.isInteger(shot.viewport?.width) || !Number.isInteger(shot.viewport?.height)) {
+    throw new TypeError('Each shot needs a file name, an absolute app path, and an integer viewport.');
   }
-  if (names.has(shot.file)) throw new TypeError(`Repeated shot file name: ${shot.file}`);
+  if (names.has(shot.file)) throw new TypeError(`Duplicate capture file: ${shot.file}`);
   names.add(shot.file);
 }
 
-console.log(JSON.stringify(shots, null, 2));
+console.log(`Capture plan is valid: ${capturePlan.length} views`);
+for (const shot of capturePlan) {
+  console.log(`${shot.file}: ${shot.view} at ${shot.viewport.width}x${shot.viewport.height}`);
+}

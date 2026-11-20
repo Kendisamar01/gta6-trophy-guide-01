@@ -3,116 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#10130f">
-    <meta name="description" content="A fan-made, offline GTA VI trophy planner for Leonida.">
-    <title>Leonida Ledger — GTA VI Trophy Guide</title>
+    <meta name="theme-color" content="#101916">
+    <meta name="description" content="A locally saved, community-made trophy roadmap for exploring Leonida.">
+    <title>Leonida Trophy Atlas</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js"></script>
   </head>
   <body>
-    <div class="shell">
-      <header class="masthead">
-        <a class="wordmark" href="./" aria-label="Leonida Ledger home">
-          <span class="mark" aria-hidden="true">L</span>
-          <span>LEONIDA <b>LEDGER</b></span>
-        </a>
-        <span class="edition">FIELD NOTES / FAN EDITION</span>
-      </header>
+    <header class="masthead">
+      <a class="wordmark" href="#" aria-label="Leonida Trophy Atlas home"><span class="wordmark-mark">L</span> LEONIDA <span>FIELD NOTES</span></a>
+      <p class="edition">GTA VI · TROPHY ROADMAP</p>
+    </header>
 
-      <main>
-        <section class="hero" aria-labelledby="page-title">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="live-dot"></span> A road map for the long haul</p>
-            <h1 id="page-title">The road to<br><em>Leonida legend.</em></h1>
-            <p class="intro">Keep your own checklist, find the next smart detour, and make every trip across the state count.</p>
-            <p class="disclaimer">Unofficial fan-made planning guide. Trophy names, conditions, and rarity figures are speculative—not a verified game list.</p>
-          </div>
-          <aside class="progress-card" aria-label="Trophy progress">
-            <div class="ring" id="progress-ring" role="img" aria-label="0 percent complete">
-              <div><strong id="percent">0%</strong><span>COMPLETE</span></div>
-            </div>
-            <div class="progress-copy">
-              <span class="eyebrow">YOUR JOURNEY</span>
-              <strong><span id="earned-count">0</span><small> / <span id="total-count">0</span> logged</small></strong>
-              <span class="muted" id="remaining-copy">Every story starts somewhere.</span>
-            </div>
-          </aside>
-        </section>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> YOUR PERSONAL FIELD GUIDE</p>
+          <h1 id="page-title">The long way<br>around <em>Leonida.</em></h1>
+          <p class="intro">A fan-made, speculative checklist for the road ahead. Keep your route, mark the moments, and make the map yours.</p>
+          <a class="jump-link" href="#trophy-list">Explore the trophy atlas <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-art" role="img" aria-label="A graphic sunset over a Florida-inspired coastline">
+          <div class="sun"></div>
+          <div class="coast coast-back"></div>
+          <div class="coast coast-front"></div>
+          <div class="art-label">STATE OF<br>LEONIDA</div>
+          <span class="art-coordinate">LAT 25° 46' N · LONG 80° 12' W</span>
+        </div>
+      </section>
 
-        <section class="roadmap" aria-label="Journey milestones">
-          <div class="road-step active"><span>01</span><div><b>Story first</b><small>Follow the main road</small></div></div>
-          <div class="road-line" aria-hidden="true"></div>
-          <div class="road-step"><span>02</span><div><b>Side streets</b><small>Meet the locals</small></div></div>
-          <div class="road-line" aria-hidden="true"></div>
-          <div class="road-step"><span>03</span><div><b>Full state</b><small>Leave no corner behind</small></div></div>
-        </section>
+      <section class="progress-panel" aria-label="Your completion progress">
+        <div class="progress-heading">
+          <div><p class="eyebrow">THE BIG PICTURE</p><h2><span id="earned-count">0</span><span class="count-divider">/</span><span id="total-count">0</span> checked off</h2></div>
+          <p id="progress-message" class="progress-message">Every great story starts somewhere.</p>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Trophy completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+          <span id="progress-fill"></span>
+        </div>
+        <div class="progress-foot"><span>STARTING OUT</span><span id="progress-percent">0%</span><span>LEGEND STATUS</span></div>
+      </section>
 
-        <section class="guide" aria-labelledby="list-title">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">THE CHECKLIST</p>
-              <h2 id="list-title">Pick your next move</h2>
-            </div>
-            <div class="data-actions">
-              <button class="button button-quiet" id="export" type="button">Export progress <span aria-hidden="true">↗</span></button>
-              <label class="button button-quiet import-button" for="import-file">Import <span aria-hidden="true">↙</span></label>
-              <input id="import-file" class="visually-hidden" type="file" accept="application/json,.json">
-            </div>
-          </div>
+      <section class="atlas" id="trophy-list" aria-labelledby="atlas-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">PIN YOUR NEXT MILESTONE</p><h2 id="atlas-title">The trophy atlas</h2></div>
+          <button class="text-button" id="reset-progress" type="button">Clear my marks</button>
+        </div>
+        <div class="toolbar">
+          <label class="search-wrap"><span class="sr-only">Search trophies</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search the atlas…" autocomplete="off"></label>
+          <label class="select-wrap"><span class="sr-only">Filter by category</span><select id="type-filter"><option value="all">All categories</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Filter by progress</span><select id="status-filter"><option value="all">All milestones</option><option value="open">Still ahead</option><option value="earned">Checked off</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Sort trophies</span><select id="sort-order"><option value="route">Guide order</option><option value="name">Name A–Z</option><option value="rarity">Rarest first</option></select></label>
+        </div>
+        <div class="list-meta"><p id="result-count" aria-live="polite"></p><div class="legend"><span class="legend-dot"></span> COMMUNITY ESTIMATE</div></div>
+        <div id="cards" class="cards" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>No milestones match this route. Try another search or filter.</p>
+      </section>
+    </main>
 
-          <div class="toolbar">
-            <label class="searchbox">
-              <span class="visually-hidden">Search trophies and hints</span>
-              <span aria-hidden="true">⌕</span>
-              <input id="search" type="search" placeholder="Search the ledger..." autocomplete="off">
-              <kbd>/</kbd>
-            </label>
-            <label class="select-wrap">
-              <span class="visually-hidden">Filter by grade</span>
-              <select id="grade-filter">
-                <option value="all">All grades</option>
-                <option value="platinum">Platinum</option>
-                <option value="gold">Gold</option>
-                <option value="silver">Silver</option>
-                <option value="bronze">Bronze</option>
-              </select>
-            </label>
-            <label class="select-wrap">
-              <span class="visually-hidden">Filter by progress</span>
-              <select id="status-filter">
-                <option value="all">All entries</option>
-                <option value="open">Still open</option>
-                <option value="earned">Logged</option>
-              </select>
-            </label>
-            <label class="spoiler-toggle">
-              <input id="spoiler-toggle" type="checkbox">
-              <span class="switch" aria-hidden="true"></span>
-              <span>Show hints</span>
-            </label>
-          </div>
-
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th scope="col">LOG</th><th scope="col">TROPHY</th><th scope="col">GRADE</th><th scope="col">RARITY*</th><th scope="col">FIELD NOTE</th></tr>
-              </thead>
-              <tbody id="trophy-rows">
-                <tr><td colspan="5" class="loading">Opening the ledger…</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="list-footer">
-            <span id="result-count">Loading entries</span>
-            <span>*Community-style estimates for planning only</span>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <span>LEONIDA LEDGER <i>·</i> MADE FOR THE MILES</span>
-        <span>Progress stays on this device.</span>
-      </footer>
-    </div>
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="app.js"></script>
+    <footer>
+      <p>Made for curious drivers, not speedrunners.</p>
+      <p>Save data stays in this browser · <span id="save-status">LOCAL CHECKLIST</span></p>
+    </footer>
   </body>
 </html>

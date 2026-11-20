@@ -1,37 +1,21 @@
-const { cpSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } = require('node:fs');
-const { join, relative } = require('node:path');
+import { cpSync, mkdirSync, writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const root = __dirname;
-const output = process.env.MAKEFUN_OUTPUT_DIR || join(root, 'out');
-const appSource = join(root, 'app');
+const root = dirname(fileURLToPath(import.meta.url));
+const output = process.env.MAKEFUN_OUTPUT_DIR ?? join(root, 'out');
 const appOutput = join(output, 'app');
 
-function listFiles(directory) {
-  return readdirSync(directory, { withFileTypes: true })
-    .flatMap((entry) => {
-      const path = join(directory, entry.name);
-      return entry.isDirectory() ? listFiles(path) : [path];
-    })
-    .sort();
-}
-
 mkdirSync(output, { recursive: true });
-cpSync(appSource, appOutput, { recursive: true });
+cpSync(join(root, 'app'), appOutput, { recursive: true });
+writeFileSync(
+  join(output, 'build-manifest.json'),
+  `${JSON.stringify({
+    title: 'Leonida Trophy Atlas',
+    entry: 'app/index.html',
+    offline: true,
+    builtAt: new Date().toISOString(),
+  }, null, 2)}\n`,
+);
 
-const files = listFiles(appOutput).map((path) => ({
-  path: relative(output, path).split('\\').join('/'),
-  bytes: statSync(path).size,
-}));
-const data = JSON.parse(readFileSync(join(appOutput, 'data/trophies.json'), 'utf8'));
-
-writeFileSync(join(output, 'dossier.json'), JSON.stringify({
-  title: 'Leonida Ledger',
-  competition: 'gta6-trophy-guide-01',
-  format: 'offline-static-guide',
-  summary: 'A locally served, fan-made GTA VI trophy planner with searchable entries and saved progress.',
-  speculative: true,
-  trophyCount: data.trophies.length,
-  files,
-}, null, 2) + '\n');
-
-console.log(`Built ${files.length} offline app files and ${data.trophies.length} guide entries in ${output}`);
+console.log(`Built offline guide at ${appOutput}`);
