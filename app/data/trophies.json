@@ -1,551 +1,636 @@
 {
-  "game": "Grand Theft Auto VI",
-  "edition": "Community concept",
-  "notice": "Unofficial fan-made roadmap. These fictional milestones and estimates are not an announced or verified trophy list.",
+  "title": "Vice City Field Notes",
+  "notice": "Unofficial fan-made trophy concepts; not an announced or verified GTA VI trophy list.",
   "trophies": [
     {
-      "id": 1,
-      "name": "First Light",
-      "type": "Story",
-      "description": "Take your first deliberate step into the story of Leonida.",
-      "hint": "Keep moving through the opening sequence; this one is designed to arrive naturally.",
-      "rarity": "95%"
+      "id": "sunlit-state",
+      "name": "A Sunlit State",
+      "grade": "platinum",
+      "type": "collection",
+      "description": "Complete every other entry in this imagined Leonida ledger.",
+      "hint": "Keep a short list of each activity category; the last few gaps are easier to spot in a clean sweep.",
+      "rarity": 1.4
     },
     {
-      "id": 2,
-      "name": "A Plan of Your Own",
-      "type": "Story",
-      "description": "Finish the first job that asks both partners to trust the same plan.",
-      "hint": "Listen for the hand-off before leaving the job area.",
-      "rarity": "82%"
+      "id": "last-favor",
+      "name": "One Last Favor",
+      "grade": "gold",
+      "type": "story",
+      "description": "Bring the central story to its closing chapter.",
+      "hint": "Follow the main-character markers when you want to move the narrative forward.",
+      "rarity": 28
     },
     {
-      "id": 3,
-      "name": "Salt on the Dashboard",
-      "type": "Story",
-      "description": "Reach the coast with the people who will shape your next chapter.",
-      "hint": "The scene triggers after the waterfront route, not at the first beach access.",
-      "rarity": "78%"
+      "id": "neon-hours",
+      "name": "Neon Hours",
+      "grade": "gold",
+      "type": "collection",
+      "description": "Reach the highest completion milestone in the state.",
+      "hint": "Check the in-game completion breakdown between story stretches instead of saving every side activity for the end.",
+      "rarity": 4.5
     },
     {
-      "id": 4,
-      "name": "A Favor Remembered",
-      "type": "Story",
-      "description": "Complete a side job whose payoff comes from an earlier conversation.",
-      "hint": "Check your messages between major jobs; some invitations are easy to miss.",
-      "rarity": "55%"
+      "id": "both-sides-coin",
+      "name": "Both Sides of the Coin",
+      "grade": "gold",
+      "type": "story",
+      "description": "See every major chapter through both leads' perspectives.",
+      "hint": "When the game offers a character switch, look for a fresh objective before leaving the area.",
+      "rarity": 12
     },
     {
-      "id": 5,
-      "name": "Paper Trail",
-      "type": "Story",
-      "description": "Recover the records that connect two otherwise separate crews.",
-      "hint": "Search the office itself before following the obvious exit marker.",
-      "rarity": "73%"
+      "id": "open-roads",
+      "name": "Open Roads",
+      "grade": "gold",
+      "type": "exploration",
+      "description": "Visit every named district and remote landmark.",
+      "hint": "Trace the coastline and highway spurs; small map labels can hide easy-to-miss corners.",
+      "rarity": 9
     },
     {
-      "id": 6,
-      "name": "The Scenic Route",
-      "type": "Story",
-      "description": "Choose the longer approach and reach the meeting without raising an alarm.",
-      "hint": "A quiet vehicle and a little patience make the detour worthwhile.",
-      "rarity": "41%"
+      "id": "first-night",
+      "name": "First Night, Best Night",
+      "grade": "silver",
+      "type": "story",
+      "description": "Finish the opening run and make it back to the city.",
+      "hint": "Stay with the active objective until the first safehouse is available.",
+      "rarity": 72
     },
     {
-      "id": 7,
-      "name": "Bridge Burner",
-      "type": "Story",
-      "description": "Leave a high-stakes operation with your getaway still intact.",
-      "hint": "Keep the car out of the line of fire until the final turn.",
-      "rarity": "62%"
+      "id": "clean-break",
+      "name": "Clean Break",
+      "grade": "silver",
+      "type": "story",
+      "description": "Leave a complicated deal with both leads still in play.",
+      "hint": "Listen for the change in mission tone before rushing toward the next marker.",
+      "rarity": 54
     },
     {
-      "id": 8,
-      "name": "Heat Check",
-      "type": "Story",
-      "description": "Shake a persistent tail before the next story beat begins.",
-      "hint": "Break sight lines, then change direction; top speed alone will not lose a follower.",
-      "rarity": "48%"
+      "id": "family-business",
+      "name": "Family Business",
+      "grade": "silver",
+      "type": "story",
+      "description": "Set up a reliable base of operations for the crew.",
+      "hint": "A new property or contact can unlock follow-up work; check the map after the scene.",
+      "rarity": 48
     },
     {
-      "id": 9,
-      "name": "Nothing Left Behind",
-      "type": "Story",
-      "description": "Complete a story job without leaving a partner or objective exposed.",
-      "hint": "Watch the companion indicator during the final stretch.",
-      "rarity": "57%"
+      "id": "weather-eye",
+      "name": "Weather Eye",
+      "grade": "silver",
+      "type": "exploration",
+      "description": "Ride through a full cycle of Leonida's changing skies.",
+      "hint": "Spend time outdoors in several regions; conditions may not change on a single short trip.",
+      "rarity": 31
     },
     {
-      "id": 10,
-      "name": "Second Door",
-      "type": "Story",
-      "description": "Find an alternate way out during a mission with a locked-down perimeter.",
-      "hint": "Look for service corridors and climbable edges before the timer gets tight.",
-      "rarity": "36%"
+      "id": "low-tide",
+      "name": "Low Tide",
+      "grade": "silver",
+      "type": "exploration",
+      "description": "Find a quiet stretch of shore away from the busiest beaches.",
+      "hint": "Follow smaller roads to the water rather than stopping at the best-known boardwalk.",
+      "rarity": 38
     },
     {
-      "id": 11,
-      "name": "Welcome Back",
-      "type": "Story",
-      "description": "Return to a familiar neighborhood after the story has moved on.",
-      "hint": "Visit the old block in free roam once the next chapter opens.",
-      "rarity": "68%"
+      "id": "backseat-driver",
+      "name": "Backseat Driver",
+      "grade": "silver",
+      "type": "skill",
+      "description": "Complete a long ride without taking the wheel yourself.",
+      "hint": "Let a companion handle the trip and avoid interrupting the ride with a character swap.",
+      "rarity": 34
     },
     {
-      "id": 12,
-      "name": "A Different Tomorrow",
-      "type": "Story",
-      "description": "See one of the story's closing outcomes through to its final scene.",
-      "hint": "Finish the main arc; the choice itself does not lock this concept milestone.",
-      "rarity": "31%"
+      "id": "biscayne-bound",
+      "name": "Biscayne Bound",
+      "grade": "silver",
+      "type": "exploration",
+      "description": "Make the full trip from the city edge to the southern coast.",
+      "hint": "Start outside the center and follow a continuous route instead of fast travel.",
+      "rarity": 42
     },
     {
-      "id": 13,
-      "name": "County Lines",
-      "type": "Exploration",
-      "description": "Cross the boundary into every broad region represented on the map.",
-      "hint": "Drive through the named district rather than fast-travelling past it.",
-      "rarity": "66%"
+      "id": "keep-change",
+      "name": "Keep the Change",
+      "grade": "silver",
+      "type": "misc",
+      "description": "Build a modest nest egg from the state's everyday opportunities.",
+      "hint": "Mix story payouts with side jobs; avoid spending every windfall as soon as it arrives.",
+      "rarity": 36
     },
     {
-      "id": 14,
-      "name": "Open Water",
-      "type": "Exploration",
-      "description": "Reach the far side of the bay and return to land under your own power.",
-      "hint": "A small boat is safer than trying to swim the whole distance.",
-      "rarity": "44%"
+      "id": "rising-signal",
+      "name": "Rising Signal",
+      "grade": "silver",
+      "type": "collection",
+      "description": "Tune in to every station available on the road.",
+      "hint": "Cycle through the dial while driving in different parts of the state.",
+      "rarity": 25
     },
     {
-      "id": 15,
-      "name": "High Tide",
-      "type": "Exploration",
-      "description": "Find a tide-cut path that only becomes usable at the right moment.",
-      "hint": "Revisit the inlet at a different time of day and watch the waterline.",
-      "rarity": "24%"
+      "id": "long-weekend",
+      "name": "The Long Weekend",
+      "grade": "silver",
+      "type": "misc",
+      "description": "Try a little of everything the leisure spots have to offer.",
+      "hint": "Look for activity icons near marinas, courts, bars, and neighborhood parks.",
+      "rarity": 19
     },
     {
-      "id": 16,
-      "name": "Last Light on the Keys",
-      "type": "Exploration",
-      "description": "Watch sunset from the southernmost public overlook.",
-      "hint": "Arrive before dusk; the overlook is a short walk above the marina.",
-      "rarity": "38%"
+      "id": "welcome-to-vice",
+      "name": "Welcome to Vice",
+      "grade": "bronze",
+      "type": "story",
+      "description": "Set foot in the city after the journey south.",
+      "hint": "Play through the opening sequence and follow the first route into town.",
+      "rarity": 88
     },
     {
-      "id": 17,
-      "name": "No More Road",
-      "type": "Exploration",
-      "description": "Reach a remote point beyond the paved routes and stay there long enough to take it in.",
-      "hint": "Follow the maintenance track past its last road sign.",
-      "rarity": "29%"
+      "id": "two-to-a-car",
+      "name": "Two to a Car",
+      "grade": "bronze",
+      "type": "story",
+      "description": "Complete a mission with both leads working together.",
+      "hint": "Continue the main thread until the story places the pair on the same job.",
+      "rarity": 79
     },
     {
-      "id": 18,
-      "name": "A Map in Your Head",
-      "type": "Exploration",
-      "description": "Discover a landmark in every corner of Leonida.",
-      "hint": "Use the skyline, water towers, and radio masts to orient yourself off-road.",
-      "rarity": "51%"
+      "id": "first-payday",
+      "name": "First Payday",
+      "grade": "bronze",
+      "type": "story",
+      "description": "Collect the first proper cut from a risky piece of work.",
+      "hint": "Finish the opening job chain and check the money total afterward.",
+      "rarity": 75
     },
     {
-      "id": 19,
-      "name": "Room for the Night",
-      "type": "Exploration",
-      "description": "Check into a roadside motel in three different counties.",
-      "hint": "Look for vacancy signs on older highways, not only near the city.",
-      "rarity": "42%"
+      "id": "no-scratch",
+      "name": "No Scratch",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Finish a pursuit without damaging the vehicle you brought in.",
+      "hint": "Use a wider route and lift off the accelerator before tight turns.",
+      "rarity": 22
     },
     {
-      "id": 20,
-      "name": "After Hours",
-      "type": "Exploration",
-      "description": "Visit a downtown landmark after most of the city has gone quiet.",
-      "hint": "The plaza is busiest in daylight; come back well after midnight.",
-      "rarity": "33%"
+      "id": "smooth-arrival",
+      "name": "Smooth Arrival",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Reach a destination in a vehicle with its original paint intact.",
+      "hint": "Avoid crowded roads and take the last block slowly.",
+      "rarity": 46
     },
     {
-      "id": 21,
-      "name": "The Backwater Route",
-      "type": "Exploration",
-      "description": "Navigate a marsh channel without touching dry land.",
-      "hint": "Slow down before narrow bends and let the channel markers guide you.",
-      "rarity": "26%"
+      "id": "island-hopper",
+      "name": "Island Hopper",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Set foot on several islands beyond the mainland.",
+      "hint": "Check boat launches and bridges for routes to small offshore map shapes.",
+      "rarity": 33
     },
     {
-      "id": 22,
-      "name": "All Four Directions",
-      "type": "Exploration",
-      "description": "Stand at the northern, southern, eastern, and western edges of the traversable map.",
-      "hint": "A coastline counts as an edge; the farthest point is not always a road.",
-      "rarity": "18%"
+      "id": "shoreline-mile",
+      "name": "Shoreline Mile",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Follow a continuous stretch of beach on foot.",
+      "hint": "Pick a coast with room to walk and stay out of the surf where the ground breaks.",
+      "rarity": 57
     },
     {
-      "id": 23,
+      "id": "night-market",
+      "name": "Night Market",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Visit a lively street market after dark.",
+      "hint": "Return to shopping streets at night; some districts feel different after sunset.",
+      "rarity": 43
+    },
+    {
+      "id": "over-the-keys",
+      "name": "Over the Keys",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Cross a long bridge without leaving the roadway.",
+      "hint": "Choose a steady car and avoid weaving through traffic for the entire crossing.",
+      "rarity": 61
+    },
+    {
+      "id": "fresh-coat",
+      "name": "Fresh Coat",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Give a vehicle a complete visual refresh.",
+      "hint": "Visit a customization shop and change at least one exterior option.",
+      "rarity": 69
+    },
+    {
+      "id": "under-the-hood",
+      "name": "Under the Hood",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Improve a vehicle's handling or performance.",
+      "hint": "Use a workshop menu to fit a mechanical upgrade, not only a cosmetic part.",
+      "rarity": 62
+    },
+    {
+      "id": "borrowed-time",
+      "name": "Borrowed Time",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Escape a search by ducking out of sight before the clock runs down.",
+      "hint": "Break the line of sight, leave the main road, and wait somewhere quiet.",
+      "rarity": 52
+    },
+    {
+      "id": "easy-does-it",
+      "name": "Easy Does It",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Lose pursuit without a collision.",
+      "hint": "Prioritize space and clean turns over top speed when the search begins.",
+      "rarity": 28
+    },
+    {
+      "id": "long-sightline",
+      "name": "Long Sightline",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Make a difficult shot from a distant vantage point.",
+      "hint": "Find a clear view, steady your aim, and use a target that is not moving.",
+      "rarity": 17
+    },
+    {
+      "id": "steady-hands",
       "name": "Steady Hands",
-      "type": "Skills",
-      "description": "Land a clean sequence at the shooting range without missing a target.",
-      "hint": "Let the reticle settle and use controlled shots instead of holding the trigger.",
-      "rarity": "49%"
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Complete a short combat encounter without missing a shot.",
+      "hint": "Wait for a clear target and use controlled shots instead of holding the trigger.",
+      "rarity": 24
     },
     {
-      "id": 24,
-      "name": "Quiet Entry",
-      "type": "Skills",
-      "description": "Reach an objective unseen and leave without triggering a search.",
-      "hint": "Crouch before entering lit areas and watch patrol patterns for a full cycle.",
-      "rarity": "34%"
+      "id": "off-the-clock",
+      "name": "Off the Clock",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Spend a full in-game evening away from the main job.",
+      "hint": "Pick an activity or quiet spot and let the day-night cycle move along.",
+      "rarity": 49
     },
     {
-      "id": 25,
-      "name": "Clean Getaway",
-      "type": "Skills",
-      "description": "Escape a pursuit without a collision or a change of vehicle.",
-      "hint": "Use alleys and covered parking to break the search cone, then stay patient.",
-      "rarity": "32%"
+      "id": "good-neighbor",
+      "name": "Good Neighbor",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Help a stranger with a problem on the roadside.",
+      "hint": "Slow down near people calling for help; optional encounters can be easy to pass by.",
+      "rarity": 41
     },
     {
-      "id": 26,
+      "id": "small-mercies",
+      "name": "Small Mercies",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Resolve a tense encounter without escalating it.",
+      "hint": "Try a calm response when the conversation gives you a choice.",
+      "rarity": 32
+    },
+    {
+      "id": "local-color",
+      "name": "Local Color",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Spend time in a neighborhood far from the tourist strip.",
+      "hint": "Take side streets inland and explore beyond the bright waterfront blocks.",
+      "rarity": 64
+    },
+    {
+      "id": "morning-coffee",
+      "name": "Morning Coffee",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Start a day with a stop at a neighborhood cafe.",
+      "hint": "Look for small storefronts when the city wakes up; not every venue is marked.",
+      "rarity": 53
+    },
+    {
+      "id": "salt-air",
+      "name": "Salt Air",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Spend a calm moment beside the water at sunrise.",
+      "hint": "Find an east-facing shoreline and arrive before the day gets busy.",
+      "rarity": 37
+    },
+    {
+      "id": "swamp-lights",
+      "name": "Swamp Lights",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Explore a wetland trail after the sun has gone down.",
+      "hint": "Follow marked paths into the marsh and bring a light source if the area is dark.",
+      "rarity": 29
+    },
+    {
+      "id": "quiet-current",
+      "name": "Quiet Current",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Travel down a river without beaching your boat.",
+      "hint": "Ease off near bends and watch for narrow channels between the banks.",
+      "rarity": 44
+    },
+    {
+      "id": "dockside-deal",
+      "name": "Dockside Deal",
+      "grade": "bronze",
+      "type": "story",
+      "description": "Finish a job that begins or ends at a working marina.",
+      "hint": "Keep an eye on mission prompts around the harbor after the main story opens up.",
+      "rarity": 39
+    },
+    {
+      "id": "highway-hum",
+      "name": "Highway Hum",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Hold a high cruising speed for a complete highway stretch.",
+      "hint": "Choose a clear section of road and stay centered rather than weaving.",
+      "rarity": 48
+    },
+    {
+      "id": "two-wheels",
+      "name": "Two Wheels",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Keep a motorcycle balanced through a clean corner.",
+      "hint": "Brake before the turn, then lean gently as you accelerate out.",
+      "rarity": 35
+    },
+    {
+      "id": "soft-landing",
       "name": "Soft Landing",
-      "type": "Skills",
-      "description": "Complete a rooftop jump and land upright on the intended platform.",
-      "hint": "Ease off the accelerator at the lip; a shorter jump is easier to control.",
-      "rarity": "43%"
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Land an aircraft safely after a short flight.",
+      "hint": "Line up early and reduce speed before you reach the runway.",
+      "rarity": 27
     },
     {
-      "id": 27,
-      "name": "Good Reflexes",
-      "type": "Skills",
-      "description": "Avoid a close-range attack and turn the opening into a clean counter.",
-      "hint": "Wait for the swing cue rather than pressing the dodge button early.",
-      "rarity": "52%"
+      "id": "skyline-loop",
+      "name": "Skyline Loop",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "See the downtown skyline from a high route and return to street level.",
+      "hint": "Use a rooftop access point or elevated road for a view above the busy blocks.",
+      "rarity": 23
     },
     {
-      "id": 28,
-      "name": "Range Day",
-      "type": "Skills",
-      "description": "Try every weapon class available at a public practice range.",
-      "hint": "A single shot with each class is enough; check the range menu for the last slot.",
-      "rarity": "61%"
+      "id": "street-circuit",
+      "name": "Street Circuit",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Place first in a neighborhood road race.",
+      "hint": "Learn the turns before pushing speed; a clean line beats a risky shortcut.",
+      "rarity": 21
     },
     {
-      "id": 29,
-      "name": "Wheel-to-Wheel",
-      "type": "Skills",
-      "description": "Finish a circuit race without leaving the course or hitting a rival.",
-      "hint": "Brake before the apex and give the pack room through the first corner.",
-      "rarity": "27%"
+      "id": "dust-and-glory",
+      "name": "Dust and Glory",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Finish an off-road event without leaving the course.",
+      "hint": "Ease over rough ground and follow the route markers through the widest path.",
+      "rarity": 26
     },
     {
-      "id": 30,
-      "name": "One Breath",
-      "type": "Skills",
-      "description": "Complete a long swim from shore to a marked buoy without resting.",
-      "hint": "Choose a calm stretch of water and set your route before diving in.",
-      "rarity": "39%"
+      "id": "fair-weather-friend",
+      "name": "Fair-Weather Friend",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Share a recreational activity with a companion.",
+      "hint": "Invite a friendly contact when an optional activity is available.",
+      "rarity": 31
     },
     {
-      "id": 31,
-      "name": "No Hands, No Problem",
-      "type": "Skills",
-      "description": "Finish a short ride using a bicycle's coasting balance instead of pedalling.",
-      "hint": "Build speed on the first slope, then keep your steering inputs light.",
-      "rarity": "21%"
+      "id": "one-more-round",
+      "name": "One More Round",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Win a small local tournament.",
+      "hint": "Practice the activity once before entering its competitive version.",
+      "rarity": 18
     },
     {
-      "id": 32,
-      "name": "A Little Practice",
-      "type": "Skills",
-      "description": "Improve a personal best in any repeatable time trial.",
-      "hint": "Choose a route you know well; a tiny improvement still counts.",
-      "rarity": "58%"
+      "id": "kept-your-word",
+      "name": "Kept Your Word",
+      "grade": "bronze",
+      "type": "story",
+      "description": "Complete an optional contact's full chain of favors.",
+      "hint": "Return to contacts after a chapter; their next request may not appear immediately.",
+      "rarity": 16
     },
     {
-      "id": 33,
-      "name": "First Car, Best Car",
-      "type": "Vehicles",
-      "description": "Keep one vehicle you found and make it your personal ride.",
-      "hint": "Store it at a safehouse garage and customize one part to make it yours.",
-      "rarity": "76%"
+      "id": "after-hours",
+      "name": "After Hours",
+      "grade": "bronze",
+      "type": "story",
+      "description": "Take a late-night job that never appears on the main route.",
+      "hint": "Check the phone and map after dark for optional work.",
+      "rarity": 20
     },
     {
-      "id": 34,
-      "name": "Paint by Numbers",
-      "type": "Vehicles",
-      "description": "Build a two-tone custom paint job at a neighborhood workshop.",
-      "hint": "Apply a primary color and a contrasting secondary finish in one visit.",
-      "rarity": "63%"
+      "id": "paper-trail",
+      "name": "Paper Trail",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Collect a set of scattered documents tied to local history.",
+      "hint": "Search desks, noticeboards, and out-of-the-way rooms in places you revisit.",
+      "rarity": 13
     },
     {
-      "id": 35,
-      "name": "The Long Haul",
-      "type": "Vehicles",
-      "description": "Drive from the city center to the northern county without changing vehicles.",
-      "hint": "Refuel before leaving town and avoid shortcuts that put the car in water.",
-      "rarity": "47%"
+      "id": "postcard-pile",
+      "name": "Postcard Pile",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Photograph a collection of notable places.",
+      "hint": "Take a picture at a landmark from more than one region, not only downtown.",
+      "rarity": 15
     },
     {
-      "id": 36,
-      "name": "Wings Over Water",
-      "type": "Vehicles",
-      "description": "Land a light aircraft at a small airstrip on the first approach.",
-      "hint": "Line up early and let the runway come to you instead of forcing the descent.",
-      "rarity": "28%"
+      "id": "odd-hours",
+      "name": "Odd Hours",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Find a hidden detail that only appears at a particular time.",
+      "hint": "Revisit unusual landmarks at night and in daylight.",
+      "rarity": 8
     },
     {
-      "id": 37,
-      "name": "Dockside Delivery",
-      "type": "Vehicles",
-      "description": "Bring a boat to a marked pier without scraping either side.",
-      "hint": "Approach slowly and use short throttle taps for the final few meters.",
-      "rarity": "35%"
+      "id": "wildlife-watcher",
+      "name": "Wildlife Watcher",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Spot several kinds of animals in their natural habitats.",
+      "hint": "Move quietly through wetlands, open fields, and shorelines; each favors a different place.",
+      "rarity": 19
     },
     {
-      "id": 38,
-      "name": "Two Wheels, One Line",
-      "type": "Vehicles",
-      "description": "Hold a motorcycle wheelie through a full city block.",
-      "hint": "Use a straight, quiet street and ease the throttle as the front wheel rises.",
-      "rarity": "31%"
+      "id": "good-eye",
+      "name": "Good Eye",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Capture a rare scene with the in-game camera.",
+      "hint": "Keep the camera ready during unusual weather and busy city moments.",
+      "rarity": 11
     },
     {
-      "id": 39,
-      "name": "Park It Like You Mean It",
-      "type": "Vehicles",
-      "description": "Park three different vehicle types entirely inside their marked spaces.",
-      "hint": "Try a car, a bike, and a boat trailer at the same public lot.",
-      "rarity": "46%"
+      "id": "tape-trader",
+      "name": "Tape Trader",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Find a handful of music recordings hidden around the state.",
+      "hint": "Search record shops and homes connected to the music scene.",
+      "rarity": 14
     },
     {
-      "id": 40,
-      "name": "Under the Bridge",
-      "type": "Vehicles",
-      "description": "Fly beneath five different bridges without clipping the structure.",
-      "hint": "Scout the clearance on foot first; the broad river crossings are forgiving.",
-      "rarity": "22%"
+      "id": "full-tank",
+      "name": "Full Tank",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Refuel at a roadside station and continue the same trip.",
+      "hint": "Pull into a service stop during a long drive rather than ending the journey first.",
+      "rarity": 58
     },
     {
-      "id": 41,
-      "name": "A Better Engine",
-      "type": "Vehicles",
-      "description": "Install a performance upgrade, then win a race in that vehicle.",
-      "hint": "Tune before entering the event so the upgrade is registered for the finish.",
-      "rarity": "54%"
+      "id": "one-of-each",
+      "name": "One of Each",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Try a vehicle from every broad class.",
+      "hint": "Keep a note of cars, bikes, utility vehicles, and aircraft you have driven or flown.",
+      "rarity": 30
     },
     {
-      "id": 42,
-      "name": "No Claim Bonus",
-      "type": "Vehicles",
-      "description": "Complete a delivery route with the vehicle returned in working order.",
-      "hint": "The timer allows a cautious pace; take the wide streets.",
-      "rarity": "37%"
+      "id": "custom-fit",
+      "name": "Custom Fit",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Personalize an outfit from head to toe.",
+      "hint": "Change several clothing slots at a shop or wardrobe before heading out.",
+      "rarity": 65
     },
     {
-      "id": 43,
-      "name": "Small-Town Welcome",
-      "type": "Hustles",
-      "description": "Finish a local favor for someone outside the city limits.",
-      "hint": "Look for a request marker near a shop, gas station, or boat ramp.",
-      "rarity": "59%"
+      "id": "home-again",
+      "name": "Home Again",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Return to a safehouse after a long trip across the map.",
+      "hint": "Mark a home location before setting off so the return leg is easy to track.",
+      "rarity": 55
     },
     {
-      "id": 44,
-      "name": "Night Shift",
-      "type": "Hustles",
-      "description": "Complete an optional job that only appears after dark.",
-      "hint": "Wait until the street lights come on, then revisit the contact's block.",
-      "rarity": "40%"
+      "id": "wrong-turn-right-place",
+      "name": "Wrong Turn, Right Place",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Discover an unexpected point of interest away from a marked route.",
+      "hint": "Take an unmarked road through the countryside and watch for small landmarks.",
+      "rarity": 40
     },
     {
-      "id": 45,
-      "name": "Cash on the Counter",
-      "type": "Hustles",
-      "description": "Earn a payout from three different side activities.",
-      "hint": "A race, a delivery, and a small service job make a quick varied route.",
-      "rarity": "56%"
+      "id": "clear-channel",
+      "name": "Clear Channel",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Listen to a complete broadcast without changing stations.",
+      "hint": "Pick a station you enjoy and leave it on through a full drive.",
+      "rarity": 47
     },
     {
-      "id": 46,
-      "name": "Fish Story",
-      "type": "Hustles",
-      "description": "Bring home a catch from both fresh water and salt water.",
-      "hint": "The bait shop stocks different gear for inland ponds and coastal piers.",
-      "rarity": "45%"
+      "id": "quiet-exit",
+      "name": "Quiet Exit",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Finish a job and leave the area without drawing a search.",
+      "hint": "Use the route the mission gives you and avoid unnecessary stops on the way out.",
+      "rarity": 25
     },
     {
-      "id": 47,
-      "name": "A Favor for the Neighborhood",
-      "type": "Hustles",
-      "description": "Help a local business recover an item without damaging its storefront.",
-      "hint": "Ask nearby witnesses before searching the alley behind the shop.",
-      "rarity": "50%"
+      "id": "moving-target",
+      "name": "Moving Target",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Complete a timed challenge while remaining in motion.",
+      "hint": "Learn the course first, then keep a steady pace through its marked sections.",
+      "rarity": 12
     },
     {
-      "id": 48,
-      "name": "Runner's High",
-      "type": "Hustles",
-      "description": "Complete a footrace event without using a vehicle between checkpoints.",
-      "hint": "Study the route markers first and cut through public paths, not private yards.",
-      "rarity": "30%"
+      "id": "story-in-the-streets",
+      "name": "Story in the Streets",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Notice a public event unfolding without a mission marker.",
+      "hint": "Pause near crowds and listen; background scenes can become small discoveries.",
+      "rarity": 22
     },
     {
-      "id": 49,
-      "name": "The Spare Key",
-      "type": "Hustles",
-      "description": "Find the optional cache that turns a routine errand into a bigger payout.",
-      "hint": "Listen for a clue in the contact's final line before the job begins.",
-      "rarity": "19%"
+      "id": "island-time",
+      "name": "Island Time",
+      "grade": "bronze",
+      "type": "misc",
+      "description": "Spend a full afternoon at a quiet island retreat.",
+      "hint": "Arrive before midday and explore the whole small island on foot.",
+      "rarity": 35
     },
     {
-      "id": 50,
-      "name": "Rain Check",
-      "type": "Hustles",
-      "description": "Finish an outdoor activity while a storm is passing through.",
-      "hint": "Check the sky before starting; the weather window is brief but forgiving.",
-      "rarity": "25%"
+      "id": "last-light",
+      "name": "Last Light",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Watch the sun set from the far edge of the state.",
+      "hint": "Reach an open western view before evening and wait for the horizon to change.",
+      "rarity": 27
     },
     {
-      "id": 51,
-      "name": "Quiet Reputation",
-      "type": "Hustles",
-      "description": "Complete three paid jobs for the same contact without a failed attempt.",
-      "hint": "Return to the contact after each payout instead of chasing a new marker.",
-      "rarity": "35%"
+      "id": "leonida-loop",
+      "name": "Leonida Loop",
+      "grade": "bronze",
+      "type": "exploration",
+      "description": "Make a complete road trip around the mainland.",
+      "hint": "Use the outer highways and keep a route that returns to your starting region.",
+      "rarity": 10
     },
     {
-      "id": 52,
-      "name": "Leave It Better",
-      "type": "Hustles",
-      "description": "Finish a community task and return the borrowed equipment.",
-      "hint": "The hand-back point is separate from the task marker, usually nearby.",
-      "rarity": "23%"
+      "id": "ledger-closed",
+      "name": "Ledger Closed",
+      "grade": "bronze",
+      "type": "collection",
+      "description": "Complete every optional activity in one category.",
+      "hint": "Use the game's checklist if available, then revisit the map for any unmarked icon.",
+      "rarity": 7
     },
     {
-      "id": 53,
-      "name": "Two Names on the Guest List",
-      "type": "People",
-      "description": "Bring your partner to a public event and stay until the closing moment.",
-      "hint": "Invite them before entering the venue; leaving early cancels the scene.",
-      "rarity": "48%"
+      "id": "no-shortcuts",
+      "name": "No Shortcuts",
+      "grade": "bronze",
+      "type": "skill",
+      "description": "Win a race without using a route that leaves the course.",
+      "hint": "Follow every checkpoint in order; a patient clean run beats a missed gate.",
+      "rarity": 16
     },
     {
-      "id": 54,
-      "name": "Good Company",
-      "type": "People",
-      "description": "Spend an evening with three different acquaintances across the map.",
-      "hint": "Accept the small invitations that arrive between larger story jobs.",
-      "rarity": "43%"
-    },
-    {
-      "id": 55,
-      "name": "The Honest Answer",
-      "type": "People",
-      "description": "Choose a candid response in a conversation that offers an easy lie.",
-      "hint": "The option is a dialogue choice, not a timed action.",
-      "rarity": "37%"
-    },
-    {
-      "id": 56,
-      "name": "Old Friends, New City",
-      "type": "People",
-      "description": "Reconnect with a familiar face in a place neither of you expected.",
-      "hint": "Revisit the diner after the second major story milestone.",
-      "rarity": "32%"
-    },
-    {
-      "id": 57,
-      "name": "Make It Right",
-      "type": "People",
-      "description": "Resolve a disagreement by returning something that was never yours.",
-      "hint": "Search the apartment before calling the other person back.",
-      "rarity": "29%"
-    },
-    {
-      "id": 58,
-      "name": "A Seat at the Table",
-      "type": "People",
-      "description": "Attend a gathering after completing favors for two people in the group.",
-      "hint": "The invitation appears only after both side-story threads are active.",
-      "rarity": "20%"
-    },
-    {
-      "id": 59,
-      "name": "Say It with Flowers",
-      "type": "People",
-      "description": "Leave a small gift at a friend's doorstep when they are away.",
-      "hint": "A market stall near the canal sells the item; visit in daytime.",
-      "rarity": "16%"
-    },
-    {
-      "id": 60,
-      "name": "Room to Forgive",
-      "type": "People",
-      "description": "Rebuild trust with a contact after a choice has strained the relationship.",
-      "hint": "Complete a favor without demanding an extra cut, then check in again.",
-      "rarity": "14%"
-    },
-    {
-      "id": 61,
-      "name": "One More Song",
-      "type": "Leisure",
-      "description": "Stay for a full set at a small live-music venue.",
-      "hint": "Find a seat near the back and let the performance finish.",
-      "rarity": "47%"
-    },
-    {
-      "id": 62,
-      "name": "Spare Change",
-      "type": "Leisure",
-      "description": "Win a round of an arcade game using only the starting credits.",
-      "hint": "Choose the cabinet with the shortest rules card and learn its timing.",
-      "rarity": "33%"
-    },
-    {
-      "id": 63,
-      "name": "Local Knowledge",
-      "type": "Leisure",
-      "description": "Read five public notices that reveal something about their neighborhood.",
-      "hint": "Community boards often sit outside libraries, laundromats, and corner stores.",
-      "rarity": "28%"
-    },
-    {
-      "id": 64,
-      "name": "A Picture of the Place",
-      "type": "Leisure",
-      "description": "Take a photo at sunrise, in the rain, and after dark.",
-      "hint": "Use the in-game camera and wait for each condition to be visible in the frame.",
-      "rarity": "42%"
-    },
-    {
-      "id": 65,
-      "name": "Three Strikes",
-      "type": "Leisure",
-      "description": "Roll a clean game at the neighborhood bowling alley.",
-      "hint": "Aim just off center and keep the release smooth.",
-      "rarity": "24%"
-    },
-    {
-      "id": 66,
-      "name": "Sunday Best",
-      "type": "Leisure",
-      "description": "Show up to a public gathering wearing a complete outfit from local shops.",
-      "hint": "Match a top, bottoms, and shoes before entering the event space.",
-      "rarity": "36%"
-    },
-    {
-      "id": 67,
-      "name": "Channel Surfer",
-      "type": "Leisure",
-      "description": "Listen to five radio stations for long enough to identify their sound.",
-      "hint": "Give each station a little airtime while driving between other activities.",
-      "rarity": "53%"
-    },
-    {
-      "id": 68,
-      "name": "Leonida, Unhurried",
-      "type": "Leisure",
-      "description": "Complete one story beat, one side favor, and one quiet evening in a single session.",
-      "hint": "There is no timer: let the day unfold at its own pace.",
-      "rarity": "12%"
+      "id": "last-call",
+      "name": "Last Call",
+      "grade": "bronze",
+      "type": "story",
+      "description": "Answer a contact's final message after the main story ends.",
+      "hint": "Check the phone and return to familiar contacts once the credits have rolled.",
+      "rarity": 18
     }
   ]
 }

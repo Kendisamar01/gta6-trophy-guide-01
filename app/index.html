@@ -3,66 +3,93 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#101916">
-    <meta name="description" content="A locally saved, community-made trophy roadmap for exploring Leonida.">
-    <title>Leonida Trophy Atlas</title>
+    <meta name="theme-color" content="#111a17">
+    <meta name="description" content="An offline, fan-made concept checklist for a possible GTA VI trophy journey.">
+    <title>Vice City Field Notes — GTA VI Trophy Guide</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="app.js"></script>
   </head>
   <body>
     <header class="masthead">
-      <a class="wordmark" href="#" aria-label="Leonida Trophy Atlas home"><span class="wordmark-mark">L</span> LEONIDA <span>FIELD NOTES</span></a>
-      <p class="edition">GTA VI · TROPHY ROADMAP</p>
+      <a class="wordmark" href="#" aria-label="Vice City Field Notes home">
+        <span class="wordmark-mark" aria-hidden="true">VC</span>
+        <span>VICE CITY<br><small>FIELD NOTES</small></span>
+      </a>
+      <div class="edition">UNOFFICIAL FAN CONCEPT <span>·</span> OFFLINE GUIDE</div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="live-dot"></span> YOUR PERSONAL FIELD GUIDE</p>
-          <h1 id="page-title">The long way<br>around <em>Leonida.</em></h1>
-          <p class="intro">A fan-made, speculative checklist for the road ahead. Keep your route, mark the moments, and make the map yours.</p>
-          <a class="jump-link" href="#trophy-list">Explore the trophy atlas <span aria-hidden="true">↓</span></a>
+          <p class="eyebrow">A road map through Leonida</p>
+          <h1 id="page-title">The long way<br>to <em>100%.</em></h1>
+          <p class="intro">Keep your own record of the jobs, drives, discoveries, and close calls that could make a Vice City run memorable.</p>
+          <p class="fiction-note">Community-made trophy ideas. Nothing here is an official Rockstar Games list.</p>
         </div>
-        <div class="hero-art" role="img" aria-label="A graphic sunset over a Florida-inspired coastline">
-          <div class="sun"></div>
-          <div class="coast coast-back"></div>
-          <div class="coast coast-front"></div>
-          <div class="art-label">STATE OF<br>LEONIDA</div>
-          <span class="art-coordinate">LAT 25° 46' N · LONG 80° 12' W</span>
-        </div>
+        <aside class="progress-panel" aria-label="Collection progress">
+          <div class="progress-heading"><span>YOUR FIELD LOG</span><span id="percent">0%</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="progress-fill"></span>
+          </div>
+          <p><strong id="earned-count">0</strong><span> / </span><span id="total-count">0</span> marked complete</p>
+          <div class="progress-actions">
+            <button id="export" class="quiet-button" type="button">Export log</button>
+            <label class="quiet-button file-button">Import log<input id="import" type="file" accept="application/json,.json"></label>
+          </div>
+          <p id="notice" class="notice" role="status" aria-live="polite"></p>
+        </aside>
       </section>
 
-      <section class="progress-panel" aria-label="Your completion progress">
-        <div class="progress-heading">
-          <div><p class="eyebrow">THE BIG PICTURE</p><h2><span id="earned-count">0</span><span class="count-divider">/</span><span id="total-count">0</span> checked off</h2></div>
-          <p id="progress-message" class="progress-message">Every great story starts somewhere.</p>
-        </div>
-        <div class="progress-track" role="progressbar" aria-label="Trophy completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
-          <span id="progress-fill"></span>
-        </div>
-        <div class="progress-foot"><span>STARTING OUT</span><span id="progress-percent">0%</span><span>LEGEND STATUS</span></div>
-      </section>
-
-      <section class="atlas" id="trophy-list" aria-labelledby="atlas-title">
+      <section class="guide-section" aria-labelledby="guide-title">
         <div class="section-heading">
-          <div><p class="eyebrow">PIN YOUR NEXT MILESTONE</p><h2 id="atlas-title">The trophy atlas</h2></div>
-          <button class="text-button" id="reset-progress" type="button">Clear my marks</button>
+          <div>
+            <p class="eyebrow">Notes from the road</p>
+            <h2 id="guide-title">Trophy ledger <span id="visible-count"></span></h2>
+          </div>
+          <label class="spoiler-toggle">
+            <input id="spoilers" type="checkbox">
+            <span class="switch" aria-hidden="true"></span>
+            <span>Show story hints</span>
+          </label>
         </div>
-        <div class="toolbar">
-          <label class="search-wrap"><span class="sr-only">Search trophies</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search the atlas…" autocomplete="off"></label>
-          <label class="select-wrap"><span class="sr-only">Filter by category</span><select id="type-filter"><option value="all">All categories</option></select></label>
-          <label class="select-wrap"><span class="sr-only">Filter by progress</span><select id="status-filter"><option value="all">All milestones</option><option value="open">Still ahead</option><option value="earned">Checked off</option></select></label>
-          <label class="select-wrap"><span class="sr-only">Sort trophies</span><select id="sort-order"><option value="route">Guide order</option><option value="name">Name A–Z</option><option value="rarity">Rarest first</option></select></label>
-        </div>
-        <div class="list-meta"><p id="result-count" aria-live="polite"></p><div class="legend"><span class="legend-dot"></span> COMMUNITY ESTIMATE</div></div>
-        <div id="cards" class="cards" aria-live="polite"></div>
-        <p id="empty-state" class="empty-state" hidden>No milestones match this route. Try another search or filter.</p>
+
+        <form class="filters" id="filters">
+          <label class="search-field">
+            <span class="sr-only">Search trophies</span>
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Search the ledger…" autocomplete="off">
+          </label>
+          <label class="select-field">GRADE
+            <select id="grade">
+              <option value="all">All grades</option>
+              <option value="platinum">Platinum</option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="bronze">Bronze</option>
+            </select>
+          </label>
+          <label class="select-field">KIND
+            <select id="kind">
+              <option value="all">All kinds</option>
+              <option value="story">Story</option>
+              <option value="exploration">Exploration</option>
+              <option value="skill">Skill</option>
+              <option value="collection">Collection</option>
+              <option value="online">Online</option>
+              <option value="misc">Miscellaneous</option>
+            </select>
+          </label>
+          <button id="clear-filters" class="clear-button" type="button">Clear filters</button>
+        </form>
+
+        <div id="rows" class="trophy-grid" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>No notes match those filters. Try another search.</p>
       </section>
     </main>
 
     <footer>
-      <p>Made for curious drivers, not speedrunners.</p>
-      <p>Save data stays in this browser · <span id="save-status">LOCAL CHECKLIST</span></p>
+      <span>VICE CITY FIELD NOTES</span>
+      <span>A fictional, fan-made guide concept · Progress stays in this browser</span>
     </footer>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

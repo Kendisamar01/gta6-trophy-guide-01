@@ -1,70 +1,89 @@
-import trophyData from './data/trophies.js';
-import { clearProgress, loadProgress, saveProgress } from './store.js';
-import { renderCards, setProgress } from './ui.js';
+import { trophies } from './data/trophies.js';
+import {
+  downloadProgress,
+  parseProgressImport,
+  readProgress,
+  writeProgress,
+} from './store.js';
+import { renderGuide, renderProgress, setNotice } from './ui.js';
 
-const cards = document.querySelector('#cards');
-const search = document.querySelector('#search');
-const typeFilter = document.querySelector('#type-filter');
-const statusFilter = document.querySelector('#status-filter');
-const sortOrder = document.querySelector('#sort-order');
-const emptyState = document.querySelector('#empty-state');
-const resultCount = document.querySelector('#result-count');
-const saveStatus = document.querySelector('#save-status');
-const trophies = trophyData.trophies;
-let earned = loadProgress();
+const trophyIds = new Set(trophies.map((trophy) => trophy.id));
+let earned = new Set();
 
-for (const type of [...new Set(trophies.map((trophy) => trophy.type))].sort()) {
-  const option = document.createElement('option');
-  option.value = type;
-  option.textContent = type;
-  typeFilter.append(option);
-}
-
-function visibleTrophies() {
-  const query = search.value.trim().toLocaleLowerCase();
-  const result = trophies.filter((trophy) => {
-    const matchesText = !query || [trophy.name, trophy.description, trophy.hint, trophy.type]
-      .some((value) => value.toLocaleLowerCase().includes(query));
-    const matchesType = typeFilter.value === 'all' || trophy.type === typeFilter.value;
-    const matchesStatus = statusFilter.value === 'all'
-      || (statusFilter.value === 'earned' ? earned.has(trophy.id) : !earned.has(trophy.id));
-    return matchesText && matchesType && matchesStatus;
-  });
-
-  if (sortOrder.value === 'name') {
-    result.sort((left, right) => left.name.localeCompare(right.name));
-  } else if (sortOrder.value === 'rarity') {
-    result.sort((left, right) => Number.parseFloat(left.rarity) - Number.parseFloat(right.rarity));
-  }
-  return result;
+try {
+  earned = readProgress(trophyIds);
+} catch (error) {
+  setNotice(error.message, true);
 }
 
 function refresh() {
-  const visible = visibleTrophies();
-  renderCards(cards, visible, earned, (id) => {
-    if (earned.has(id)) earned.delete(id);
-    else earned.add(id);
-    saveProgress(earned);
-    saveStatus.textContent = 'SAVED IN THIS BROWSER';
-    refresh();
+  renderProgress(earned, trophies.length);
+  renderGuide({
+    trophies,
+    earned,
+    query: document.getElementById('search').value,
+    grade: document.getElementById('grade').value,
+    type: document.getElementById('kind').value,
+    showHints: document.getElementById('spoilers').checked,
+    onToggle: toggleTrophy,
   });
-  setProgress(trophies.length, earned.size);
-  resultCount.textContent = `${visible.length} ${visible.length === 1 ? 'milestone' : 'milestones'} shown`;
-  emptyState.hidden = visible.length > 0;
-  cards.hidden = visible.length === 0;
 }
 
-for (const control of [search, typeFilter, statusFilter, sortOrder]) {
-  control.addEventListener('input', refresh);
-  control.addEventListener('change', refresh);
-}
+function toggleTrophy(id) {
+  if (!trophyIds.has(id)) return;
+  const updated = new Set(earned);
+  if (updated.has(id)) updated.delete(id);
+  else updated.add(id);
 
-document.querySelector('#reset-progress').addEventListener('click', () => {
-  if (earned.size === 0 || !window.confirm('Clear every checked milestone from this browser?')) return;
-  earned = new Set();
-  clearProgress();
-  saveStatus.textContent = 'CHECKLIST CLEARED';
+  try {
+    writeProgress(updated);
+    earned = updated;
+    setNotice('Field log saved on this device.');
+  } catch (error) {
+    setNotice(`Progress could not be saved: ${error.message}`, true);
+  }
   refresh();
+}
+
+document.getElementById('search').addEventListener('input', refresh);
+document.getElementById('grade').addEventListener('change', refresh);
+document.getElementById('kind').addEventListener('change', refresh);
+document.getElementById('spoilers').addEventListener('change', refresh);
+document.getElementById('clear-filters').addEventListener('click', () => {
+  document.getElementById('search').value = '';
+  document.getElementById('grade').value = 'all';
+  document.getElementById('kind').value = 'all';
+  refresh();
+});
+
+document.getElementById('export').addEventListener('click', () => {
+  try {
+    downloadProgress(earned);
+    setNotice('Progress export downloaded.');
+  } catch (error) {
+    setNotice(`Export could not be created: ${error.message}`, true);
+  }
+});
+
+document.getElementById('import').addEventListener('change', async (event) => {
+  const input = event.currentTarget;
+  const file = input.files[0];
+  if (!file) return;
+
+  try {
+    const imported = parseProgressImport(await file.text(), trophyIds);
+    writeProgress(imported.earned);
+    earned = imported.earned;
+    const skipped = imported.skipped
+      ? ` ${imported.skipped} unknown entr${imported.skipped === 1 ? 'y was' : 'ies were'} skipped.`
+      : '';
+    setNotice(`Progress imported.${skipped}`);
+  } catch (error) {
+    setNotice(`Import failed: ${error.message}`, true);
+  } finally {
+    input.value = '';
+    refresh();
+  }
 });
 
 refresh();

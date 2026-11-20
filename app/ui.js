@@ -1,60 +1,106 @@
-function textElement(tag, className, value) {
-  const element = document.createElement(tag);
-  if (className) element.className = className;
-  element.textContent = value;
-  return element;
+function makeTag(className, text) {
+  const tag = document.createElement('span');
+  tag.className = className;
+  tag.textContent = text;
+  return tag;
 }
 
-export function renderCards(container, trophies, earned, onToggle) {
-  const fragment = document.createDocumentFragment();
-  for (const trophy of trophies) {
-    const done = earned.has(trophy.id);
-    const card = document.createElement('article');
-    card.className = `trophy-card${done ? ' is-earned' : ''}`;
+function makeRarity(trophy) {
+  const wrapper = document.createElement('p');
+  wrapper.className = 'rarity';
+  wrapper.append(document.createTextNode(`Estimated rarity · ${trophy.rarity}%`));
+  const meter = document.createElement('span');
+  meter.className = 'rarity-meter';
+  meter.setAttribute('aria-hidden', 'true');
 
-    card.append(textElement('span', 'trophy-index', String(trophy.id).padStart(2, '0')));
-    const body = document.createElement('div');
-    body.className = 'trophy-body';
-    const kicker = document.createElement('p');
-    kicker.className = 'trophy-kicker';
-    kicker.append(textElement('span', 'type-tag', trophy.type));
-    kicker.append(textElement('span', '', `EST. ${trophy.rarity}`));
-    body.append(kicker);
-    body.append(textElement('h3', 'trophy-name', trophy.name));
-    body.append(textElement('p', 'trophy-description', trophy.description));
-    const hint = document.createElement('p');
-    hint.className = 'trophy-hint';
-    hint.append(textElement('strong', '', 'FIELD NOTE  '));
-    hint.append(document.createTextNode(trophy.hint));
-    body.append(hint);
-    card.append(body);
-
-    const mark = document.createElement('button');
-    mark.type = 'button';
-    mark.className = 'mark-button';
-    mark.setAttribute('aria-label', `${done ? 'Unmark' : 'Mark'} ${trophy.name}`);
-    mark.setAttribute('aria-pressed', String(done));
-    mark.addEventListener('click', () => onToggle(trophy.id));
-    card.append(mark);
-    fragment.append(card);
+  const filled = Math.max(1, Math.min(5, Math.round(trophy.rarity / 20)));
+  for (let index = 0; index < 5; index += 1) {
+    const segment = document.createElement('i');
+    if (index < filled) segment.className = 'filled';
+    meter.append(segment);
   }
-  container.replaceChildren(fragment);
+  wrapper.append(meter);
+  return wrapper;
 }
 
-export function setProgress(total, earned) {
-  const percent = total === 0 ? 0 : Math.round((earned / total) * 100);
-  document.querySelector('#earned-count').textContent = String(earned);
-  document.querySelector('#total-count').textContent = String(total);
-  document.querySelector('#progress-percent').textContent = `${percent}%`;
-  const bar = document.querySelector('#progress-bar');
-  bar.setAttribute('aria-valuenow', String(percent));
-  document.querySelector('#progress-fill').style.width = `${percent}%`;
-  const message = percent === 100
-    ? 'Leonida is yours. What a ride.'
-    : percent >= 60
-      ? 'The horizon is getting closer.'
-      : percent >= 25
-        ? 'Your story is taking shape.'
-        : 'Every great story starts somewhere.';
-  document.querySelector('#progress-message').textContent = message;
+function makeCard(trophy, earned, showHints) {
+  const card = document.createElement('article');
+  card.className = `trophy-card${earned.has(trophy.id) ? ' is-earned' : ''}`;
+
+  const check = document.createElement('button');
+  check.className = 'check-control';
+  check.type = 'button';
+  check.dataset.trophyId = trophy.id;
+  check.setAttribute('aria-label', `${earned.has(trophy.id) ? 'Unmark' : 'Mark'} ${trophy.name}`);
+  check.setAttribute('aria-pressed', String(earned.has(trophy.id)));
+  check.textContent = '✓';
+
+  const content = document.createElement('div');
+  const top = document.createElement('div');
+  top.className = 'trophy-topline';
+  top.append(makeTag(`grade-badge grade-${trophy.grade}`, trophy.grade));
+  top.append(makeTag('kind-label', trophy.type));
+
+  const title = document.createElement('h3');
+  title.className = 'trophy-name';
+  title.textContent = trophy.name;
+  const description = document.createElement('p');
+  description.className = 'trophy-description';
+  description.textContent = trophy.description;
+
+  content.append(top, title, description);
+  if (showHints) {
+    const hint = document.createElement('p');
+    hint.className = 'hint';
+    const label = document.createElement('strong');
+    label.textContent = 'FIELD TIP';
+    hint.append(label, document.createTextNode(trophy.hint));
+    content.append(hint);
+  }
+  content.append(makeRarity(trophy));
+  card.append(check, content);
+  return card;
+}
+
+export function renderGuide({
+  trophies,
+  earned,
+  query,
+  grade,
+  type,
+  showHints,
+  onToggle,
+}) {
+  const list = document.getElementById('rows');
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const visible = trophies.filter((trophy) => {
+    const matchesGrade = grade === 'all' || trophy.grade === grade;
+    const matchesType = type === 'all' || trophy.type === type;
+    const searchable = `${trophy.name} ${trophy.description} ${trophy.hint} ${trophy.type}`.toLocaleLowerCase();
+    return matchesGrade && matchesType && searchable.includes(normalizedQuery);
+  });
+
+  list.replaceChildren(...visible.map((trophy) => makeCard(trophy, earned, showHints)));
+  document.getElementById('visible-count').textContent = `${visible.length} / ${trophies.length}`;
+  document.getElementById('empty-state').hidden = visible.length > 0;
+  list.onclick = (event) => {
+    const button = event.target.closest('button[data-trophy-id]');
+    if (button) onToggle(button.dataset.trophyId);
+  };
+}
+
+export function renderProgress(earned, total) {
+  const count = earned.size;
+  const percentage = total === 0 ? 0 : Math.round((count / total) * 100);
+  document.getElementById('earned-count').textContent = String(count);
+  document.getElementById('total-count').textContent = String(total);
+  document.getElementById('percent').textContent = `${percentage}%`;
+  document.getElementById('progress-fill').style.width = `${percentage}%`;
+  document.querySelector('[role="progressbar"]').setAttribute('aria-valuenow', String(percentage));
+}
+
+export function setNotice(message, isError = false) {
+  const notice = document.getElementById('notice');
+  notice.textContent = message;
+  notice.dataset.state = isError ? 'error' : 'success';
 }

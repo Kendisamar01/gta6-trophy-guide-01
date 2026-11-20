@@ -1,22 +1,29 @@
-import { cpSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const output = process.env.MAKEFUN_OUTPUT_DIR ?? join(root, 'out');
-const appOutput = join(output, 'app');
+const requiredFiles = [
+  'app/index.html',
+  'app/style.css',
+  'app/app.js',
+  'app/ui.js',
+  'app/store.js',
+  'app/data/trophies.json',
+  'app/data/trophies.js',
+  'shots.json',
+  'shots.mjs',
+];
+
+for (const relativePath of requiredFiles) {
+  const source = join(root, relativePath);
+  if (!statSync(source).isFile()) throw new Error(`Required build input is not a file: ${relativePath}`);
+}
 
 mkdirSync(output, { recursive: true });
-rmSync(appOutput, { recursive: true, force: true });
-cpSync(join(root, 'app'), appOutput, { recursive: true });
-writeFileSync(
-  join(output, 'build-manifest.json'),
-  `${JSON.stringify({
-    title: 'Leonida Trophy Atlas',
-    entry: 'app/index.html',
-    offline: true,
-    builtAt: new Date().toISOString(),
-  }, null, 2)}\n`,
-);
+cpSync(join(root, 'app'), join(output, 'app'), { recursive: true });
+cpSync(join(root, 'shots.json'), join(output, 'shots.json'));
+cpSync(join(root, 'shots.mjs'), join(output, 'shots.mjs'));
 
-console.log(`Build complete: offline guide at ${appOutput}; manifest at ${join(output, 'build-manifest.json')}`);
+console.log(`Built offline trophy guide at ${output}`);
