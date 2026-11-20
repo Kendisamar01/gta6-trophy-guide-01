@@ -1,7 +1,8 @@
 # Vice City Field Notes
 
-[![make.fun · gta6-trophy-guide-01](https://img.shields.io/badge/make.fun-gta6--trophy--guide--01-47a789?style=for-the-badge)](https://make.fun/competitions/gta6-trophy-guide-01)
-[![GitHub repository](https://img.shields.io/badge/GitHub-Kendisamar01%2Fgta6--trophy--guide--01-20232a?logo=github&style=for-the-badge)](https://github.com/Kendisamar01/gta6-trophy-guide-01)
+[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![rank](https://make.fun/badge/gta6-trophy-guide-01/Kendisamar01/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![reward](https://make.fun/badge/gta6-trophy-guide-01/Kendisamar01/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 
 An offline-first, fan-made trophy ledger for a hypothetical GTA VI completion run. Browse 64 original trophy concepts, search and filter by grade or activity, reveal optional field tips, and keep progress in local browser storage with JSON import/export. Names, requirements, and rarity percentages are community-made estimates, not official game information.
 
