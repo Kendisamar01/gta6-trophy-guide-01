@@ -1,0 +1,8 @@
+node_modules/
+.chromium/
+.chromium-runtime/
+.puppeteer/
+.puppeteer-cache/
+.local-apt/
+.local-libs/
+.local/

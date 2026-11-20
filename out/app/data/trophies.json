@@ -1,0 +1,1217 @@
+{
+  "game": "Grand Theft Auto VI",
+  "platform": "PlayStation 5",
+  "list": "the official 55 trophies, 2026-11-18",
+  "trophies": [
+    {
+      "id": 1,
+      "name": "Vice Got a Price!",
+      "description": "Congratulations! You're a Leonida Legend.",
+      "grade": "platinum",
+      "guide": "The platinum is the final reward for completing every other entry in this list. Treat the trophy tracker as your source of truth: finish the campaign, side strands, collectibles, challenges and activities, then check for any delayed unlock before starting another run.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Work through each roadmap stage and mark trophies only after the console awards them.",
+        "Use the 100% checklist and clean up any remaining activities.",
+        "If the platinum does not pop immediately, reload the save and revisit the trophy screen."
+      ],
+      "roadmap_stage": 6,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154497-vice-got-a-price"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Just Like Paradise",
+      "description": "Complete Gone Fishing.",
+      "grade": "bronze",
+      "guide": "Gone Fishing is the opening story mission and its completion awards this bronze. Follow the active objective markers through the introduction and finish the mission normally; optional exploration can wait until free roam. The description gives no special rank or choice requirement.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Start or resume the main story and follow the Gone Fishing objectives.",
+        "Complete the final objective and allow the post-mission save to finish.",
+        "Confirm the trophy notification before moving on."
+      ],
+      "roadmap_stage": 1,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154498-just-like-paradise"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Paradise Lost",
+      "description": "Complete Chapter 1.",
+      "grade": "bronze",
+      "guide": "This is a chapter-completion trophy, not a collectible. Keep following the main-story marker until Chapter 1 closes; if the chapter has several missions, the trophy arrives after its final mission and transition. No medal grade is stated, so prioritize completion over optional mission challenges.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open the story mission list and identify the remaining Chapter 1 objective.",
+        "Finish the mission chain and let the next chapter load.",
+        "Check the trophy list after the autosave."
+      ],
+      "roadmap_stage": 1,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154499-paradise-lost"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "T**s Ass Drug Money",
+      "description": "Complete Chapter 2.",
+      "grade": "bronze",
+      "guide": "Complete the main-story chain through the end of Chapter 2. Chapter trophies normally unlock at the chapter transition rather than when an individual mission begins; keep the campaign marker active if the notification is delayed. The title is stylized, but the requirement is simply the chapter finish.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Continue the main story until the Chapter 2 finale.",
+        "Complete its objectives without abandoning the mission.",
+        "Wait for the chapter transition and verify the unlock."
+      ],
+      "roadmap_stage": 2,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154500-t-s-ass-drug-money"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Vice City, Baby!",
+      "description": "Complete Chapter 3.",
+      "grade": "bronze",
+      "guide": "Advance the campaign through the Chapter 3 finale. The trophy description does not require a score, difficulty, or optional objective, so a straightforward successful completion is enough. If you are cleaning up collectibles, do so after the story opens the full map rather than interrupting a mission.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Follow the main-story marker through Chapter 3.",
+        "Finish the final mission in the chapter.",
+        "Allow the save and results screen to complete before checking trophies."
+      ],
+      "roadmap_stage": 2,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154501-vice-city-baby"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Top Of The World, Ma",
+      "description": "Complete Chapter 4.",
+      "grade": "bronze",
+      "guide": "Reach and complete the end of Chapter 4. Keep a manual save before major story decisions as a general safeguard, but this chapter trophy itself lists no branching condition. If a mission is replayable, replay is a fallback; do not rely on replay for any unverified choice-based side content.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Track the remaining Chapter 4 story marker.",
+        "Complete the chapter-ending mission.",
+        "Confirm the trophy in the PS5 trophy list."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154502-top-of-the-world-ma"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "You Gotta Know When to Get Off",
+      "description": "Complete the final mission.",
+      "grade": "gold",
+      "guide": "Finish the campaign’s final mission. The description names no ending variant, medal, or difficulty, so complete the final objective and let the ending sequence fully resolve. Before launching the finale, make a manual save if you still want a clean pre-finale point for optional activities.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Create a separate save before the final mission if the game permits.",
+        "Complete the final mission and its ending sequence.",
+        "Wait through credits or the return-to-play transition, then verify the gold trophy."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154503-you-gotta-know-when-to-get-off"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Trust",
+      "description": "Complete Breakfast Run.",
+      "grade": "bronze",
+      "guide": "Breakfast Run is a named story mission. Start it from the campaign marker or mission list and complete every required objective; the trophy is tied to mission completion, not a particular score. If it is not available yet, continue the preceding story missions and check the map again.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Locate Breakfast Run in the active story objectives.",
+        "Finish the mission rather than quitting to free roam.",
+        "Confirm the unlock after the results/save transition."
+      ],
+      "roadmap_stage": 2,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154504-trust"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Break the Bank",
+      "description": "Complete The Cartel Heist.",
+      "grade": "bronze",
+      "guide": "Complete The Cartel Heist from its story mission start through the escape or closing objective. The trophy description only asks for completion, so focus on surviving the set pieces and following the on-screen prompts. Revisit the mission list if you need to replay it after the first clear.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Prepare ammunition and armor before triggering the heist.",
+        "Follow the mission prompts through the finale.",
+        "Let the mission-complete screen appear and verify the trophy."
+      ],
+      "roadmap_stage": 2,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154505-break-the-bank"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Family Matters",
+      "description": "Complete Child's Play.",
+      "grade": "bronze",
+      "guide": "Child’s Play is a story mission completion. Follow its objective chain to the mission-end state; there is no listed medal or optional condition. Keep a manual save when the game offers one, especially if you are also tracking the story-sensitive opportunities noted elsewhere in this guide.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Start Child’s Play from the campaign marker.",
+        "Complete each required objective and do not leave the mission area.",
+        "Check the PS5 trophy notification after the save."
+      ],
+      "roadmap_stage": 2,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154506-family-matters"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "DWNFALL",
+      "description": "Complete Headliners.",
+      "grade": "bronze",
+      "guide": "Headliners is the named requirement. Follow its active mission prompts to completion and allow any post-mission scene to finish. If the title has not appeared on the map yet, progress the main campaign rather than searching for a collectible; this is a story trophy.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open the story map and select Headliners.",
+        "Complete the mission’s main objectives.",
+        "Wait for the mission-complete transition, then confirm the unlock."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154507-dwnfall"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Hi-Jacked",
+      "description": "Complete VCIA Takedown.",
+      "grade": "bronze",
+      "guide": "VCIA Takedown awards its trophy when the mission is completed. Treat the airport mission like a normal campaign set piece: follow the objective markers, manage wanted pressure as prompted, and finish the final escape objective. The description does not specify a stealth or time requirement.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Begin VCIA Takedown from the story marker.",
+        "Follow the objective updates through the takedown and exit.",
+        "Finish the mission and check the trophy list."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154508-hi-jacked"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Snow Storm",
+      "description": "Complete Operation Savage Glory.",
+      "grade": "bronze",
+      "guide": "Complete Operation Savage Glory from start to finish. No extra rank condition is stated, so do not spend time chasing an assumed gold medal; simply finish the required objectives and let the save complete. A replay from the mission list can help if you want to confirm the trigger.",
+      "kind": "story",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Select Operation Savage Glory from the campaign objectives.",
+        "Complete the full mission chain without abandoning it.",
+        "Verify the bronze trophy after the results screen."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154509-snow-storm"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "A Long Road",
+      "description": "Attain 100% Completion.",
+      "grade": "gold",
+      "guide": "This is the broad cleanup milestone: the game’s 100% tracker is the authority, not a guess based on trophy completion. Open the in-game completion statistics and work category by category. Trophies can cover only part of the total, so finish any remaining activities or collectibles shown by the tracker.",
+      "kind": "collectible",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Check the in-game 100% statistics to see incomplete categories.",
+        "Finish the listed story, activity, stranger, and collectible requirements.",
+        "Recheck the tracker after saving; repeat the last credited task if the percentage lags."
+      ],
+      "roadmap_stage": 6,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154510-a-long-road"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Cunning Stunts",
+      "description": "Complete 250 Stunts.",
+      "grade": "silver",
+      "guide": "Build a running stunt tally and target the 250-credit threshold. Use the activity or challenge counter if available, and vary the stunt types the game recognizes instead of repeating an uncredited maneuver. A safe, open stretch of road is better for learning; keep a manual save before attempting risky jumps.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Find stunt opportunities and attempt them with a clear landing zone.",
+        "Check that each attempt is credited before moving to the next.",
+        "Continue until the trophy tracker confirms 250 completed stunts."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154511-cunning-stunts"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Master of None",
+      "description": "Try each type of activity once.",
+      "grade": "bronze",
+      "guide": "The requirement is breadth, not a high score: sample every activity type once. Use the map’s activity icons and note each category as you try it; the description says nine types, so stop repeating a category once it has registered. If the counter does not move, complete the activity’s opening round rather than merely entering.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Use the map to find one activity from each distinct type.",
+        "Finish an opening round or valid attempt for each type.",
+        "Compare your progress with the game’s activity tracker until all nine count."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154512-master-of-none"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "The Shootist",
+      "description": "Earn a gold medal in all Shooting Range challenges.",
+      "grade": "silver",
+      "guide": "Earn gold in every Shooting Range challenge, a long precision grind. Complete the range’s introductory challenges first, then tackle one weapon or drill at a time. Tune sensitivity and aim-assist to your comfort, prioritize clean target hits over speed until you understand the scoring, and record which challenge still lacks gold.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Unlock and visit each Shooting Range challenge.",
+        "Earn a gold medal in each of the 42 listed drills.",
+        "Revisit only the non-gold entries in the range menu."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154513-the-shootist"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Top Fun",
+      "description": "Win a Top Fun Drone Race at every location.",
+      "grade": "bronze",
+      "guide": "Win a Top Fun Drone Race at each of the 14 locations. Track locations separately because a repeat win at one venue does not replace a missing venue. Learn the drone’s turning response in a low-pressure race, then follow each checkpoint in order; a finish without first place will not satisfy the requirement.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Find every Top Fun event and note its location before starting.",
+        "Win at least once at each of the 14 distinct locations.",
+        "Use the event list to revisit any venue without a recorded win."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154514-top-fun"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Earn Cash, Not Kudos",
+      "description": "Win 20 different races.",
+      "grade": "bronze",
+      "guide": "Win 20 different races; the word “different” makes variety essential. Keep a list of race names or use the event board’s completion marks, and do not assume twenty replays of one course count. Learn the route on the first attempt, then prioritize clean turns and avoiding collisions on the win run.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open the race list and choose events you have not won.",
+        "Finish in first place in 20 distinct race events.",
+        "Check the event records for any race that still lacks a win."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154515-earn-cash-not-kudos"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Baited My Tackle",
+      "description": "Beat Cal in a fishing challenge.",
+      "grade": "bronze",
+      "guide": "Cal’s fishing challenge is a head-to-head activity. Start the challenge from its event marker, use the supplied rules or bait instructions, and focus on landing valid catches before the timer ends. The description does not say that the attempt is unique; if you lose, check whether Cal’s event can be started again before spending time on other fishing.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Locate Cal and start the fishing challenge.",
+        "Follow the on-screen bait and catch rules for the active round.",
+        "Beat Cal’s score and confirm the trophy before leaving the area."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154516-baited-my-tackle"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Stick Fiddler",
+      "description": "Complete an arcade game.",
+      "grade": "bronze",
+      "guide": "Complete a single arcade game, not every machine. Interact with an arcade cabinet, learn its basic objective from the start screen, and finish a round or campaign to the game-over/clear state the cabinet recognizes. If an initial attempt does not count, replay through the full ending rather than backing out early.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Find an arcade cabinet and interact with it.",
+        "Play through the complete game session to its end state.",
+        "Check for the unlock before starting another cabinet."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154517-stick-fiddler"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Road to Rehabilitation",
+      "description": "Complete the final mission for Andy.",
+      "grade": "bronze",
+      "guide": "Andy’s final mission is the endpoint of a stranger strand. Find Andy’s contact marker, complete the preceding missions in that strand if the finale is locked, and then finish the final objective. Keep a small checklist of strand progress; the trophy comes from the ending mission rather than merely meeting the character.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Find Andy’s strand marker and complete any available setup missions.",
+        "Return when the final mission becomes available.",
+        "Finish the finale and verify the trophy."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154518-road-to-rehabilitation"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "This Was No Boat Accident",
+      "description": "Complete the final mission for Kenton.",
+      "grade": "bronze",
+      "guide": "Kenton’s finale belongs to a multi-step stranger strand. If the final mission is not available, continue that character’s earlier encounters and check for a follow-up after changing time or location. Do not confuse an individual encounter with the required final mission; wait for its completion state to register.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Locate Kenton’s strand and clear its earlier missions.",
+        "Check the map or messages for the finale after each completed step.",
+        "Complete Kenton’s last mission and confirm the unlock."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154519-this-was-no-boat-accident"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "The Lone Rider",
+      "description": "Complete the final mission for Billy.",
+      "grade": "bronze",
+      "guide": "Billy’s last mission is the exact trigger. Work through any earlier strand encounters until the finale appears, then complete every objective. Since the description does not promise that the strand can be restarted, keep a separate save before a major narrative choice and avoid abandoning an active mission.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Start Billy’s strand from its contact marker.",
+        "Complete its follow-up missions until the finale opens.",
+        "Finish the final mission and check the trophy list."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154520-the-lone-rider"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Strangers & Freaks",
+      "description": "Complete 8 mission strands for strangers across the state of Leonida.",
+      "grade": "silver",
+      "guide": "Complete eight distinct stranger mission strands across Leonida. Count strands rather than individual missions: a multi-mission chain contributes one strand when its story is finished. Use the stranger/contact icons and keep a simple list so you do not repeatedly advance the same strand while another remains untouched.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Find stranger markers around the map and start their mission chains.",
+        "Finish eight separate strands through their concluding mission.",
+        "Check the trophy counter and clear another strand if it has not advanced."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154521-strangers-freaks"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Supply & Demand",
+      "description": "Complete the final mission for Randy.",
+      "grade": "bronze",
+      "guide": "Randy’s final mission is unlocked by progressing his side strand. Complete each encounter in order, then look for the concluding mission marker or follow-up contact. The trophy is for the final mission only, so partial strand progress does not qualify; record where you left off if the chain pauses.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Find Randy’s stranger marker and finish the available strand missions.",
+        "Return to the map after each completion to reveal any continuation.",
+        "Clear Randy’s finale and verify the bronze award."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154522-supply-demand"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Spin On This!",
+      "description": "Complete the final mission for Tyrone.",
+      "grade": "bronze",
+      "guide": "Tyrone’s closing mission is the target, not simply meeting Tyrone. Follow the strand from its first marker and finish the intervening objectives until the final mission appears. Keep a save before major story choices as a precaution, then confirm the actual trophy unlock at the end of the chain.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Start Tyrone’s strand and complete every available setup mission.",
+        "Check for a new marker or message after each step.",
+        "Finish the last mission and wait for the trophy notification."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154523-spin-on-this"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Positive Mental Attitude",
+      "description": "Meditate at every spot across Leonida.",
+      "grade": "bronze",
+      "guide": "Visit and meditate at all 18 marked spots. Use the map or collectible tracker to distinguish a visited location from one where the interaction actually registered. Arrive on foot, interact with the spot, and let the meditation animation finish; revisit any place whose marker remains incomplete.",
+      "kind": "collectible",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Locate meditation spots using the in-game map and checklist.",
+        "Interact at each of the 18 spots and wait for the activity to finish.",
+        "Revisit any spot that is still unmarked in the tracker."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154524-positive-mental-attitude"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Fair Game",
+      "description": "Hunt a unique animal for Bret.",
+      "grade": "bronze",
+      "guide": "Bret’s unique-animal hunt is a named stranger objective, so treat it as a precautionary missable even though a permanent lockout is not confirmed. Make a manual save before starting, follow the hunt’s clues rather than shooting unrelated wildlife, and complete the assigned hunt objective. Check current community guidance if the clue is unclear.",
+      "kind": "activity",
+      "missable": true,
+      "missable_note": "Precautionary flag only: the description sounds event-specific, but a permanent lockout is not confirmed. Make a manual save and verify the current in-game/community guidance before an irreversible choice.",
+      "steps": [
+        "Save before beginning Bret’s hunt, if manual saves are available.",
+        "Start the stranger mission and follow its specific tracking clues.",
+        "Take the unique animal only when the objective identifies it, then finish the mission."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154525-fair-game"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Don't Touch My Deck",
+      "description": "Complete 3 Collectible Card sets.",
+      "grade": "silver",
+      "guide": "Complete three full Collectible Card sets. A few cards from three different sets are not enough: track each set to completion and use the game’s own collection screen to spot gaps. Pick up cards as you explore, then sweep the remaining locations one set at a time.",
+      "kind": "collectible",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open the collection tracker and identify the available card sets.",
+        "Collect every card in three distinct sets.",
+        "Recheck the tracker after the final pickup for completion credit."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154526-don-t-touch-my-deck"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "You WAiNKer!",
+      "description": "WAiNK It at 100 locations.",
+      "grade": "silver",
+      "guide": "Use WAiNK It at 100 distinct locations. Treat it as a location checklist rather than a repeatable action counter; revisit the app or interaction prompt at new places and watch for a confirmation. Plan a route across different neighborhoods and avoid repeating the same spot if the tally is location-based.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open WAiNK It and note how a successful location is recorded.",
+        "Use it at 100 different eligible locations while exploring.",
+        "Review its counter and revisit new locations until it reaches 100."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154527-you-wainker"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "One Last Thing",
+      "description": "Complete 50 Challenges.",
+      "grade": "bronze",
+      "guide": "Complete 50 challenges, keeping the in-game challenge tracker open as your authoritative count. Challenges may span several categories, so make progress naturally while working on other trophies and then choose short, repeatable entries for cleanup. A challenge is not complete until its progress indicator awards it.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Review the challenge list and sort entries by remaining progress.",
+        "Complete 50 distinct challenge objectives.",
+        "Recheck the counter and finish any partially completed entry."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154528-one-last-thing"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Hot Together",
+      "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
+      "grade": "bronze",
+      "guide": "With your partner active, deliberately build a four-star Wanted Level and then lose the police. Pick an escape route with multiple turns and cover, and avoid letting the partner get separated or incapacitated. The trophy requires both the four-star threshold and a successful escape, not merely reaching four stars.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Ensure your partner is with you before causing trouble.",
+        "Reach four stars and break line of sight using alleys, cover, or a vehicle.",
+        "Stay clear until the wanted level disappears and confirm the trophy."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154529-hot-together"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Retail Therapy",
+      "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
+      "grade": "bronze",
+      "guide": "Rob three shops consecutively with your partner while preserving the wanted state between stops. Map the route before the first robbery, keep a fast getaway vehicle ready, and avoid escaping the police between locations. The wording is unusual: if the wanted meter drops or the sequence breaks, plan to restart the chain.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Bring your partner and identify three nearby shops in advance.",
+        "Rob each shop in succession without clearing the Wanted Level.",
+        "Escape only after the third robbery and check for the trophy."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154530-retail-therapy"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Whip It Good",
+      "description": "Discover 100 vehicles.",
+      "grade": "bronze",
+      "guide": "Discover 100 vehicles by encountering new vehicle models in the world. Sample varied traffic, parked vehicles, and districts rather than repeatedly entering the same familiar car; the game’s vehicle catalogue or progress tracker should show what registered. Explore at a relaxed pace and let this accumulate during other activities.",
+      "kind": "collectible",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Enter or inspect a wide variety of vehicles across Leonida.",
+        "Check the vehicle collection for newly discovered entries.",
+        "Continue with models not yet recorded until the total reaches 100."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154531-whip-it-good"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Gunslinger",
+      "description": "Take down 5 enemies in a single use of Combat Focus.",
+      "grade": "bronze",
+      "guide": "Combat Focus must take down five enemies in one activation. Build or save the ability before a fight, gather five low-threat enemies in view, then trigger Focus and make each takedown while its active window lasts. If the meter drains early, retreat and recharge rather than trying to combine separate uses.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Charge Combat Focus before engaging a group.",
+        "Choose a safe encounter with at least five enemies nearby.",
+        "Activate once and defeat five enemies before the effect ends."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154532-gunslinger"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Catch Me If You Can",
+      "description": "Make an unscheduled departure at VCIA.",
+      "grade": "bronze",
+      "guide": "The unusual departure at VCIA is an event-shaped requirement, so use a manual save first; a permanent miss is not confirmed, but the precaution avoids losing a possible one-off opportunity. Go to the airport, look for a departure method that is not the routine exit, and follow the game’s prompts. Avoid assuming a specific vehicle or route until the objective clarifies it.",
+      "kind": "activity",
+      "missable": true,
+      "missable_note": "Precautionary flag only: the description sounds event-specific, but a permanent lockout is not confirmed. Make a manual save and verify the current in-game/community guidance before an irreversible choice.",
+      "steps": [
+        "Create a manual save before attempting the airport event.",
+        "Travel to VCIA and inspect the available departure/interaction prompts.",
+        "Complete a departure the game recognizes as unscheduled and verify the trophy."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154533-catch-me-if-you-can"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Challenging Tank",
+      "description": "Kinda hot in these Rhinos.",
+      "grade": "bronze",
+      "guide": "The description is a hint rather than a precise checklist. Treat this as a combat encounter involving Rhino tanks and consult the in-game challenge or trophy record for the exact trigger if it does not unlock. Prepare armor and a clear escape route before provoking military response; do not assume that merely seeing a tank counts.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Keep a separate save before a high-heat encounter.",
+        "Find the Rhino/tank situation indicated by the game’s challenge prompt.",
+        "Complete the described encounter and check the trophy list immediately."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154534-challenging-tank"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Sneakthief",
+      "description": "Rob a jewelry store without being detected.",
+      "grade": "bronze",
+      "guide": "Rob a jewelry store without being detected. Scout entrances and exits first, enter quietly, and avoid actions that draw attention before the robbery is complete. If an alarm or detection state triggers, leave safely and reset the attempt; the trophy description does not specify whether a getaway is also required, so prioritize the undetected robbery itself.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Locate a jewelry store and study its approach before entering.",
+        "Use stealth and avoid alerting staff or security during the robbery.",
+        "Exit without detection and verify the trophy before creating more heat."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154535-sneakthief"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Maximum Withdrawal",
+      "description": "Rob 5 Bank Vaults and escape.",
+      "grade": "silver",
+      "guide": "Rob five bank vaults and escape, a multi-attempt heist grind. Keep a tally of completed vaults and successful escapes; an interrupted escape may not count. Prepare equipment before each job, learn the route out, and avoid repeating a vault that the game already records as complete.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Find eligible bank-vault opportunities and prepare before triggering each one.",
+        "Open and loot the vault, then survive the escape for credit.",
+        "Repeat until five distinct successful vault robberies are recorded."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154536-maximum-withdrawal"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "A Classic Blitz Play",
+      "description": "Rob an Armored Truck and escape.",
+      "grade": "bronze",
+      "guide": "Rob an Armored Truck and get away. Intercept a marked truck when the game presents an opportunity, secure the loot, and break pursuit rather than lingering at the scene. The trophy requires an escape, so confirm the heat is gone and the event has closed before moving to another activity.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Watch for an armored-truck event or map indicator.",
+        "Stop the vehicle and complete the robbery objective.",
+        "Escape the pursuit and check for the trophy after the event resolves."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154537-a-classic-blitz-play"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "The Goodtime State",
+      "description": "Explore all of Leonida.",
+      "grade": "bronze",
+      "guide": "Explore all 52 areas of Leonida. Use the map-fog or regional discovery tracker to identify the remaining gaps; entering a region is safer than relying on a flyover. Travel through each unlabeled area and wait for its name or discovery confirmation to appear before marking it complete.",
+      "kind": "collectible",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open the map and note undiscovered regions.",
+        "Travel through each of the 52 areas until its discovery registers.",
+        "Recheck the map and revisit any region without a confirmed marker."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154538-the-goodtime-state"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Pest Control",
+      "description": "Rob an Illegal Operation belonging to each gang.",
+      "grade": "bronze",
+      "guide": "Rob an Illegal Operation belonging to each of the nine gangs. The important part is coverage: record gang names, complete one robbery per faction, and use the operation marker or mission text to confirm the owner. Looting several operations from the same gang does not replace a missing faction.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Use the map or mission text to identify all nine gang affiliations.",
+        "Complete one Illegal Operation robbery for each distinct gang.",
+        "Cross-check your list before repeating an already-covered faction."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154539-pest-control"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "In The Beginning…",
+      "description": "Enjoy a cocktail with a view on Ocean Beach.",
+      "grade": "bronze",
+      "guide": "This is a specific Ocean Beach moment. It is tagged precautionary because the description names a single location and action; a permanent miss is not confirmed. Save before attempting it, reach Ocean Beach, find a cocktail-serving viewpoint, and complete the drink/view interaction fully before leaving the area.",
+      "kind": "activity",
+      "missable": true,
+      "missable_note": "Precautionary flag only: the description sounds event-specific, but a permanent lockout is not confirmed. Make a manual save and verify the current in-game/community guidance before an irreversible choice.",
+      "steps": [
+        "Make a manual save before the location-specific attempt.",
+        "Go to Ocean Beach and locate a viewpoint where a cocktail can be enjoyed.",
+        "Complete the interaction and verify the trophy before leaving."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154540-in-the-beginning"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Capital Offense",
+      "description": "Smash your way out of a vehicle showroom in classic style.",
+      "grade": "bronze",
+      "guide": "The showroom escape sounds like a set-piece opportunity, so make a manual save first; its missable status is precautionary rather than confirmed. Find a vehicle showroom, trigger the classic smash-through escape described by the game, and finish the escape objective. If the trophy does not trigger, check the event log before repeating.",
+      "kind": "activity",
+      "missable": true,
+      "missable_note": "Precautionary flag only: the description sounds event-specific, but a permanent lockout is not confirmed. Make a manual save and verify the current in-game/community guidance before an irreversible choice.",
+      "steps": [
+        "Save before starting the showroom encounter.",
+        "Enter the vehicle showroom and follow its robbery/escape prompt.",
+        "Smash out through the intended exit and complete the escape."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154541-capital-offense"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Let’s Go Bowling",
+      "description": "Follow-through at the Kolt & Associates' bowling alley.",
+      "grade": "bronze",
+      "guide": "Visit the Kolt & Associates bowling alley and follow through on a bowling attempt. Start a game at the venue, complete the throw sequence, and let the result register; the wording does not ask for a win or a perfect game. If nothing unlocks after one roll, finish a full frame or match before leaving.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Travel to Kolt & Associates’ bowling alley.",
+        "Start a game and complete the bowling follow-through.",
+        "Allow the score/result to post, then check the trophy list."
+      ],
+      "roadmap_stage": 3,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154542-let-s-go-bowling"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Personal Best",
+      "description": "A partnership with mass appeal.",
+      "grade": "bronze",
+      "guide": "The description is intentionally cryptic, so its exact trigger is not established by the text alone. Treat the partnership moment as a precautionary event: save before major story choices, maintain the partnership context, and follow any mission prompt that mentions mass appeal. This is not a confirmed missable; verify a current community walkthrough before committing to a branch.",
+      "kind": "activity",
+      "missable": true,
+      "missable_note": "Precautionary flag only: the description sounds event-specific, but a permanent lockout is not confirmed. Make a manual save and verify the current in-game/community guidance before an irreversible choice.",
+      "steps": [
+        "Create a manual save before a major partnership or public-facing story decision.",
+        "Keep the partner present and follow prompts tied to the described partnership.",
+        "Check the trophy record after the relevant event and consult a current guide if still locked."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154543-personal-best"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Actions Speak Louder",
+      "description": "Choices made (for better or worse).",
+      "grade": "bronze",
+      "guide": "“Choices made” suggests progress through decision events, but the description does not say how many or whether any choice is exclusive. Do not make irreversible decisions solely to chase this trophy without a save. Continue the story, note each choice-related notification, and check the trophy tracker; the 500 figure in the starter hint is not part of the official description and should not be treated as a confirmed target.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Keep a manual save before consequential story decisions.",
+        "Progress normally and record any choice-related challenge updates.",
+        "Use the in-game trophy tracker or a current community guide to verify the exact trigger."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154544-actions-speak-louder"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Bad Luck, I Guess",
+      "description": "Second time's the charm.",
+      "grade": "bronze",
+      "guide": "“Second time’s the charm” is deliberately vague, so the exact activity is not inferable from the description. It is flagged as precautionary because it may refer to a two-attempt moment; a permanent miss is not confirmed. Save before likely one-off challenges, try the named event once, then retry it as prompted and check the trophy record.",
+      "kind": "activity",
+      "missable": true,
+      "missable_note": "Precautionary flag only: the description sounds event-specific, but a permanent lockout is not confirmed. Make a manual save and verify the current in-game/community guidance before an irreversible choice.",
+      "steps": [
+        "Create a save before a story or challenge with an attempt-based prompt.",
+        "Complete the relevant event once, then make the second attempt the description implies.",
+        "Check the trophy list; use the in-game hint or community thread to identify the exact event if needed."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154545-bad-luck-i-guess"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "The Truth Is Out There",
+      "description": "What the hell just happened?",
+      "grade": "bronze",
+      "guide": "The description signals a strange encounter but does not identify its location or trigger. Treat the first such encounter as a potential one-off and keep a manual save before investigating unusual map markers or events. Follow the event to its resolution, then check the trophy list; avoid treating random sightings as guaranteed progress.",
+      "kind": "activity",
+      "missable": true,
+      "missable_note": "Precautionary flag only: the description sounds event-specific, but a permanent lockout is not confirmed. Make a manual save and verify the current in-game/community guidance before an irreversible choice.",
+      "steps": [
+        "Save before investigating a unique or unexplained event.",
+        "Follow unusual encounter prompts until the event fully resolves.",
+        "Verify the unlock and consult a current community guide for a precise location if it remains locked."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154546-the-truth-is-out-there"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Ten Pin",
+      "description": "Bowl 'em over with a melee drive-by.",
+      "grade": "bronze",
+      "guide": "Perform a melee drive-by and knock down a target. Equip a melee weapon, move alongside a suitable target at low speed, and use the game’s drive-by melee input when prompted. Practice in a low-pressure area and keep enough distance to avoid hitting obstacles; the target must actually be knocked down for credit.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Equip a melee weapon and find a safe, low-speed stretch.",
+        "Drive beside a target and use the melee drive-by action.",
+        "Confirm the target is knocked down and check for the trophy."
+      ],
+      "roadmap_stage": 4,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154547-ten-pin"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Dime on the Dollar",
+      "description": "Earn $250,000 laundering Marked Bills through your contacts.",
+      "grade": "bronze",
+      "guide": "Launder a cumulative $250,000 in Marked Bills through contacts. Build up the marked-bill balance, identify a contact who accepts it, and track the amount actually laundered rather than cash merely collected. Use several transactions if the contact has a per-visit limit and verify the running total in the relevant app or ledger.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Collect Marked Bills during eligible activities.",
+        "Use a contact or service that explicitly launders Marked Bills.",
+        "Repeat until the laundered total reaches $250,000 and verify the unlock."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154548-dime-on-the-dollar"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Treat Yo Self",
+      "description": "Spend $100,000 across all shops.",
+      "grade": "bronze",
+      "guide": "Spend a cumulative $100,000 across all shops. Purchases are more reliable than browsing; keep spending varied across clothing, equipment, and other shop types, and check whether the in-game tracker credits only completed transactions. Avoid relying on one expensive purchase if the wording requires spending across shops.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Visit multiple shop categories and purchase useful items.",
+        "Track total completed spend rather than money spent at a single venue.",
+        "Continue until the cumulative shop total reaches $100,000."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154549-treat-yo-self"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Little Boxes",
+      "description": "Purchase all garage properties.",
+      "grade": "bronze",
+      "guide": "Purchase every garage property, eight in total. Check the property map for owned and unowned garage icons, gather enough funds, then buy each remaining property through its sign or listing. Do not confuse a garage upgrade with a separate property; revisit the property list after each purchase.",
+      "kind": "collectible",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open the property map/list and note all eight garages.",
+        "Earn enough cash and purchase each unowned garage.",
+        "Recheck ownership records to catch any remaining property."
+      ],
+      "roadmap_stage": 6,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154550-little-boxes"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "On the Spot",
+      "description": "Register 10 vehicles to the Scooter Bros app.",
+      "grade": "bronze",
+      "guide": "Register ten vehicles in the Scooter Bros app. Find eligible vehicles, use the app’s registration flow, and wait for confirmation before moving on. Count registrations rather than vehicles merely discovered or driven; if a vehicle is rejected, try another type and check the app’s eligible list.",
+      "kind": "activity",
+      "missable": false,
+      "missable_note": "No confirmed missable condition is stated in this trophy description.",
+      "steps": [
+        "Open Scooter Bros and review its vehicle registration prompt.",
+        "Register eligible vehicles one at a time and confirm each entry.",
+        "Continue until the app shows ten registered vehicles."
+      ],
+      "roadmap_stage": 5,
+      "sources": [
+        {
+          "label": "Exophase · PS5 trophy record and description",
+          "url": "https://www.exophase.com/trophy/grand-theft-auto-vi-psn/1154551-on-the-spot"
+        }
+      ]
+    }
+  ]
+}
