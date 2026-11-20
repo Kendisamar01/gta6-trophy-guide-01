@@ -1,224 +1,208 @@
-(function () {
+(() => {
   const stages = [
-    { title: 'Get your bearings', caption: 'Start the campaign and open up Leonida.' },
-    { title: 'Follow the main roads', caption: 'Push through the next chapter milestones.' },
-    { title: 'Open the map', caption: 'Explore regions and sample the state’s activities.' },
-    { title: 'Build your skill set', caption: 'Races, range work, stunts, and street challenges.' },
-    { title: 'Take the side roads', caption: 'Stranger strands, collectibles, and longer grinds.' },
-    { title: 'Close the loop', caption: 'Finish 100%, secure the properties, and claim platinum.' },
+    { title: 'Get your bearings', caption: 'Begin the story and learn your way around.' },
+    { title: 'Follow the main roads', caption: 'Reach the next campaign milestones.' },
+    { title: 'Open the map', caption: 'Discover the region and try its activities.' },
+    { title: 'Build your skill set', caption: 'Work on races, range challenges, and stunts.' },
+    { title: 'Take the side roads', caption: 'Finish stranger strands and longer collections.' },
+    { title: 'Close the loop', caption: 'Complete the final cleanup and claim platinum.' },
   ];
   const filters = [
     { id: 'all', label: 'All', matches: () => true },
-    { id: 'story', label: 'Story', matches: (trophy) => trophy.kind === 'story' },
-    { id: 'missable', label: 'Missable', matches: (trophy) => trophy.missable },
-    { id: 'collectibles', label: 'Collectibles', matches: (trophy) => trophy.kind === 'collectible' },
-    { id: 'activities', label: 'Activities', matches: (trophy) => trophy.kind === 'activity' },
-    { id: 'online', label: 'Online', matches: (trophy) => trophy.kind === 'online' },
+    { id: 'story', label: 'Story', matches: (item) => item.kind === 'story' },
+    { id: 'missable', label: 'Missable', matches: (item) => item.missable },
+    { id: 'collectibles', label: 'Collectibles', matches: (item) => item.kind === 'collectible' },
+    { id: 'activities', label: 'Activities', matches: (item) => item.kind === 'activity' },
+    { id: 'online', label: 'Online', matches: (item) => item.kind === 'online' },
   ];
 
-  function element(tag, className, text) {
-    const node = document.createElement(tag);
-    if (className) node.className = className;
-    if (text !== undefined) node.textContent = text;
-    return node;
+  function make(tag, className = '', text) {
+    const item = document.createElement(tag);
+    if (className) item.className = className;
+    if (text !== undefined) item.textContent = text;
+    return item;
   }
 
-  function safeName(trophy, store, spoilers) {
-    return spoilers && trophy.kind === 'story' && !store.has(trophy.id)
-      ? `Story trophy #${String(trophy.id).padStart(2, '0')}`
-      : trophy.name;
+  function obscured(item, progress, spoilers) {
+    return spoilers && item.kind === 'story' && !progress.has(item.id);
   }
 
-  function isHidden(trophy, store, spoilers) {
-    return spoilers && trophy.kind === 'story' && !store.has(trophy.id);
+  function titleFor(item, progress, spoilers) {
+    return obscured(item, progress, spoilers) ? `Story trophy #${String(item.id).padStart(2, '0')}` : item.name;
   }
 
-  function renderFilterTabs(root, active, onChange) {
+  function filterBar(root, current, onChoose) {
     root.replaceChildren();
     for (const filter of filters) {
-      const button = element('button', `filter-button${active === filter.id ? ' active' : ''}`, filter.label);
+      const button = make('button', `filter-button${filter.id === current ? ' active' : ''}`, filter.label);
       button.type = 'button';
-      button.setAttribute('aria-pressed', String(active === filter.id));
-      button.addEventListener('click', () => onChange(filter.id));
+      button.setAttribute('aria-pressed', String(filter.id === current));
+      button.addEventListener('click', () => onChoose(filter.id));
       root.append(button);
     }
   }
 
-  function makeRow(trophy, selected, store, spoilers, onSelect, onToggle) {
-    const hidden = isHidden(trophy, store, spoilers);
-    const row = element('article', `trophy-row${selected === trophy.id ? ' selected' : ''}`);
+  function trophyRow(item, options) {
+    const { selected, progress, spoilers, onSelect, onToggle } = options;
+    const hidden = obscured(item, progress, spoilers);
+    const row = make('article', `trophy-row${selected === item.id ? ' selected' : ''}`);
     row.tabIndex = 0;
-    row.setAttribute('aria-label', `${safeName(trophy, store, spoilers)}${trophy.missable ? ', missable flag' : ''}`);
-    row.addEventListener('click', () => onSelect(trophy.id));
+    row.setAttribute('aria-label', `${titleFor(item, progress, spoilers)}${item.missable ? ', missable flag' : ''}`);
+    row.addEventListener('click', () => onSelect(item.id));
     row.addEventListener('keydown', (event) => {
       if (event.target === row && (event.key === 'Enter' || event.key === ' ')) {
         event.preventDefault();
-        onSelect(trophy.id);
+        onSelect(item.id);
       }
     });
 
-    const checkbox = element('input', 'earn-check');
-    checkbox.type = 'checkbox';
-    checkbox.checked = store.has(trophy.id);
-    checkbox.setAttribute('aria-label', `Mark ${safeName(trophy, store, spoilers)} earned`);
-    checkbox.addEventListener('click', (event) => event.stopPropagation());
-    checkbox.addEventListener('change', () => onToggle(trophy.id, checkbox.checked));
+    const check = make('input', 'earn-check');
+    check.type = 'checkbox';
+    check.checked = progress.has(item.id);
+    check.setAttribute('aria-label', `Mark ${titleFor(item, progress, spoilers)} earned`);
+    check.addEventListener('click', (event) => event.stopPropagation());
+    check.addEventListener('change', () => onToggle(item.id, check.checked));
 
-    const number = element('span', 'trophy-number', String(trophy.id).padStart(2, '0'));
-    const copy = element('span', 'trophy-copy');
-    copy.append(element('strong', 'trophy-name', safeName(trophy, store, spoilers)));
-    copy.append(element('span', 'trophy-description', hidden ? 'Earn this trophy to reveal its description.' : trophy.description));
-
-    const tags = element('span', 'row-tags');
-    if (trophy.missable) tags.append(element('span', 'missable-tag', 'MISSABLE'));
-    tags.append(element('span', `grade-tag ${trophy.grade}`, trophy.grade));
-    tags.append(element('span', 'kind-tag', trophy.kind));
-    row.append(checkbox, number, copy, tags);
+    const copy = make('span', 'trophy-copy');
+    copy.append(make('strong', 'trophy-name', titleFor(item, progress, spoilers)));
+    copy.append(make('span', 'trophy-description', hidden ? 'Earn this trophy to reveal its description.' : item.description));
+    const tags = make('span', 'row-tags');
+    if (item.missable) tags.append(make('span', 'missable-tag', 'MISSABLE'));
+    tags.append(make('span', `grade-tag ${item.grade}`, item.grade), make('span', 'kind-tag', item.kind));
+    row.append(check, make('span', 'trophy-number', String(item.id).padStart(2, '0')), copy, tags);
     return row;
   }
 
-  function renderChecklist(root, trophies, filter, search, selected, store, spoilers, onSelect, onToggle) {
-    const currentFilter = filters.find((item) => item.id === filter) ?? filters[0];
-    const query = search.trim().toLowerCase();
-    const filtered = trophies.filter((trophy) => {
-      if (!currentFilter.matches(trophy)) return false;
-      if (!query) return true;
-      return `${trophy.name} ${trophy.description} ${trophy.kind}`.toLowerCase().includes(query);
-    });
-    document.getElementById('list-title').textContent = currentFilter.label === 'All' ? 'All trophies' : `${currentFilter.label} trophies`;
-    document.getElementById('list-count').textContent = `${filtered.length} ${filtered.length === 1 ? 'entry' : 'entries'}`;
+  function checklist(options) {
+    const { root, trophies, filter, search, selected, progress, spoilers, onSelect, onToggle } = options;
+    const active = filters.find((item) => item.id === filter) ?? filters[0];
+    const term = search.trim().toLocaleLowerCase();
+    const results = trophies.filter((item) => active.matches(item)
+      && (!term || `${item.name} ${item.description} ${item.kind}`.toLocaleLowerCase().includes(term)));
+    document.getElementById('list-title').textContent = active.label === 'All' ? 'All trophies' : `${active.label} trophies`;
+    document.getElementById('list-count').textContent = `${results.length} ${results.length === 1 ? 'entry' : 'entries'}`;
     root.replaceChildren();
-    if (!filtered.length) {
-      root.append(element('p', 'empty-state', query ? 'No trophies match that search.' : 'No trophies in this category. The list is kept empty when the official set has no matching entries.'));
+    if (!results.length) {
+      root.append(make('p', 'empty-state', term ? 'No trophies match that search.' : 'There are no trophies in this category.'));
       return;
     }
-    for (const trophy of filtered) root.append(makeRow(trophy, selected, store, spoilers, onSelect, onToggle));
+    for (const item of results) root.append(trophyRow(item, { selected, progress, spoilers, onSelect, onToggle }));
   }
 
-  function renderSources(root, sources) {
+  function addSources(root, sources) {
     root.replaceChildren();
     for (const source of sources) {
-      const link = element('a', 'source-link', source.label);
-      const sourceOrigin = ['https:', '', 'www.exophase.com'].join('/');
-      link.href = `${sourceOrigin}/${source.url.replace(/^\/+/, '')}`;
+      let address;
+      try {
+        address = new URL(source.url);
+      } catch {
+        continue;
+      }
+      if (address.protocol !== 'https:') continue;
+      const link = make('a', 'source-link', source.label);
+      link.href = address.href;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
       root.append(link);
     }
   }
 
-  function renderDetail(root, trophy, store, spoilers) {
+  function detail(root, item, progress, spoilers) {
     root.replaceChildren();
-    if (!trophy) {
-      const empty = element('div', 'detail-empty');
-      empty.append(element('span', 'detail-kicker', 'FIELD NOTE / 00'));
-      empty.append(element('strong', '', 'Choose a trophy'));
-      empty.append(element('p', '', 'Select any entry to see its requirement, route notes, steps, and references.'));
+    if (!item) {
+      const empty = make('div', 'detail-empty');
+      empty.append(make('span', 'detail-kicker', 'FIELD NOTE / 00'), make('strong', '', 'Choose a trophy'));
+      empty.append(make('p', '', 'Select an entry to see its requirement, route notes, and references.'));
       root.append(empty);
       return;
     }
-    const hidden = isHidden(trophy, store, spoilers);
-    root.append(element('div', 'detail-kicker', `${trophy.kind.toUpperCase()} / FIELD NOTE`));
-    root.lastChild.append(element('span', 'detail-id', `NO. ${String(trophy.id).padStart(2, '0')}`));
-    root.append(element('h2', '', safeName(trophy, store, spoilers)));
-    root.append(element('p', 'detail-desc', hidden ? 'Story details are hidden until this trophy is earned.' : trophy.description));
+
+    const hidden = obscured(item, progress, spoilers);
+    const heading = make('div', 'detail-kicker', `${item.kind.toUpperCase()} / FIELD NOTE`);
+    heading.append(make('span', 'detail-id', `NO. ${String(item.id).padStart(2, '0')}`));
+    root.append(heading, make('h2', '', titleFor(item, progress, spoilers)));
+    root.append(make('p', 'detail-desc', hidden ? 'Story details are hidden until this trophy is earned.' : item.description));
 
     if (hidden) {
-      root.append(element('div', 'detail-divider'));
-      root.append(element('p', 'detail-label', 'SPOILER GUARD'));
-      root.append(element('p', 'detail-guide', 'Mark this trophy earned to reveal its name and description. Other story details stay tucked away while spoiler protection is on.'));
+      root.append(make('div', 'detail-divider'), make('p', 'detail-label', 'SPOILER GUARD'));
+      root.append(make('p', 'detail-guide', 'Mark this trophy as earned to reveal its name and description.'));
     } else {
-      root.append(element('div', 'detail-divider'));
-      root.append(element('p', 'detail-label', 'THE ROUTE'));
-      root.append(element('p', 'detail-guide', trophy.guide));
-      root.append(element('div', 'detail-divider'));
-      root.append(element('p', 'detail-label', 'DO THIS'));
-      const steps = element('ol', 'detail-steps');
-      for (const step of trophy.steps) steps.append(element('li', '', step));
+      root.append(make('div', 'detail-divider'), make('p', 'detail-label', 'THE ROUTE'));
+      root.append(make('p', 'detail-guide', item.guide), make('div', 'detail-divider'), make('p', 'detail-label', 'DO THIS'));
+      const steps = make('ol', 'detail-steps');
+      for (const instruction of item.steps) steps.append(make('li', '', instruction));
       root.append(steps);
-      if (trophy.missable) root.append(element('p', 'missable-note', `MISSABLE PRECAUTION · ${trophy.missable_note}`));
-      root.append(element('div', 'detail-divider'));
-      root.append(element('p', 'detail-label', 'REFERENCES'));
-      const sources = element('div', 'source-list');
-      renderSources(sources, trophy.sources);
-      root.append(sources);
+      if (item.missable) root.append(make('p', 'missable-note', `MISSABLE PRECAUTION · ${item.missable_note}`));
+      root.append(make('div', 'detail-divider'), make('p', 'detail-label', 'REFERENCES'));
+      const references = make('div', 'source-list');
+      addSources(references, item.sources);
+      root.append(references);
     }
 
-    const actions = element('div', 'detail-actions');
-    const label = element('label', 'detail-earned');
-    const checkbox = element('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = store.has(trophy.id);
-    checkbox.addEventListener('change', () => window.GuideActions.toggle(trophy.id, checkbox.checked));
-    label.append(checkbox, document.createTextNode('Mark earned'));
-    actions.append(label, element('span', `detail-grade ${trophy.grade}`, trophy.grade));
+    const actions = make('div', 'detail-actions');
+    const label = make('label', 'detail-earned');
+    const earned = make('input');
+    earned.type = 'checkbox';
+    earned.checked = progress.has(item.id);
+    earned.addEventListener('change', () => window.GuideActions.toggle(item.id, earned.checked));
+    label.append(earned, document.createTextNode('Mark earned'));
+    actions.append(label, make('span', `detail-grade ${item.grade}`, item.grade));
     root.append(actions);
   }
 
-  function renderRoadmap(root, trophies, selected, store, spoilers, onSelect, onToggle) {
-    const roadmap = element('div', 'roadmap');
-    roadmap.append(element('p', 'roadmap-intro', 'A flexible six-stage route from the opening story to the last cleanup task. It is an order-of-operations suggestion, not a spoiler-heavy walkthrough.'));
-    const flagged = trophies.filter((trophy) => trophy.missable);
+  function roadmap(root, trophies, selected, progress, spoilers, actions) {
+    const board = make('div', 'roadmap');
+    board.append(make('p', 'roadmap-intro', 'A flexible six-stage route from the opening story through the final cleanup.'));
+    const flagged = trophies.filter((item) => item.missable);
     if (flagged.length) {
-      const watch = element('div', 'roadmap-watch');
-      watch.append(element('span', 'detail-label', `SAVE-FIRST FLAGS · ${flagged.length}`));
-      for (const trophy of flagged) {
-        const chip = element('button', 'watch-chip', `${String(trophy.id).padStart(2, '0')} · ${safeName(trophy, store, spoilers)}`);
+      const notice = make('div', 'roadmap-watch');
+      notice.append(make('span', 'detail-label', `SAVE-FIRST FLAGS · ${flagged.length}`));
+      for (const item of flagged) {
+        const chip = make('button', 'watch-chip', `${String(item.id).padStart(2, '0')} · ${titleFor(item, progress, spoilers)}`);
         chip.type = 'button';
-        chip.addEventListener('click', () => onSelect(trophy.id));
-        watch.append(chip);
+        chip.addEventListener('click', () => actions.onSelect(item.id));
+        notice.append(chip);
       }
-      roadmap.append(watch);
+      board.append(notice);
     }
-    for (let stage = 1; stage <= stages.length; stage += 1) {
-      const entries = trophies.filter((trophy) => trophy.roadmap_stage === stage);
-      const done = entries.filter((trophy) => store.has(trophy.id)).length;
-      const card = element('section', 'stage-card');
-      const head = element('div', 'stage-head');
-      head.append(element('span', 'stage-number', String(stage).padStart(2, '0')));
-      const title = element('div');
-      title.append(element('h3', 'stage-title', stages[stage - 1].title));
-      title.append(element('p', 'stage-caption', stages[stage - 1].caption));
-      head.append(title, element('span', 'stage-count', `${done}/${entries.length} done`));
-      card.append(head);
-      const chips = element('div', 'stage-trophies');
-      for (const trophy of entries) {
-        const hidden = isHidden(trophy, store, spoilers);
-        const chip = element('button', 'stage-chip');
+
+    stages.forEach((stage, index) => {
+      const number = index + 1;
+      const entries = trophies.filter((item) => item.roadmap_stage === number);
+      const done = entries.filter((item) => progress.has(item.id)).length;
+      const card = make('section', 'stage-card');
+      const header = make('div', 'stage-head');
+      const heading = make('div');
+      heading.append(make('h3', 'stage-title', stage.title), make('p', 'stage-caption', stage.caption));
+      header.append(make('span', 'stage-number', String(number).padStart(2, '0')), heading, make('span', 'stage-count', `${done}/${entries.length} done`));
+      const chips = make('div', 'stage-trophies');
+      for (const item of entries) {
+        const hidden = obscured(item, progress, spoilers);
+        const chip = make('button', `stage-chip${selected === item.id ? ' selected' : ''}`);
         chip.type = 'button';
-        chip.addEventListener('click', () => onSelect(trophy.id));
-        chip.append(element('span', '', String(trophy.id).padStart(2, '0')));
-        chip.append(element('strong', '', safeName(trophy, store, spoilers)));
-        if (trophy.missable) chip.append(element('span', 'missable-tag', 'MISSABLE'));
-        if (hidden) chip.setAttribute('aria-label', `Story trophy ${trophy.id}, details hidden`);
+        chip.addEventListener('click', () => actions.onSelect(item.id));
+        chip.append(make('span', '', String(item.id).padStart(2, '0')), make('strong', '', titleFor(item, progress, spoilers)));
+        if (item.missable) chip.append(make('span', 'missable-tag', 'MISSABLE'));
+        if (hidden) chip.setAttribute('aria-label', `Story trophy ${item.id}, details hidden`);
         chips.append(chip);
       }
-      card.append(chips);
-      if (entries.some((trophy) => trophy.missable)) {
-        card.append(element('div', 'stage-warning', `${entries.filter((trophy) => trophy.missable).length} precautionary missable flag${entries.filter((trophy) => trophy.missable).length === 1 ? '' : 's'} · make a save before one-off events`));
-      }
-      roadmap.append(card);
-    }
-    root.replaceChildren(roadmap);
+      card.append(header, chips);
+      const stageFlags = entries.filter((item) => item.missable).length;
+      if (stageFlags) card.append(make('div', 'stage-warning', `${stageFlags} precautionary missable flag${stageFlags === 1 ? '' : 's'} · consider a save before one-off events`));
+      board.append(card);
+    });
+    root.replaceChildren(board);
   }
 
-  function renderProgress(store, total) {
+  function progress(label, percentLabel, countLabel, fill, store, total) {
     const count = store.count();
-    const percent = Math.round((count / total) * 100);
-    document.getElementById('progress-label').textContent = `${count} / ${total} earned`;
-    document.getElementById('progress-percent').textContent = `${percent}% complete`;
-    document.getElementById('earned-count').textContent = String(count).padStart(2, '0');
-    const fill = document.getElementById('progress-fill');
+    const percent = total ? Math.round((count / total) * 100) : 0;
+    label.textContent = `${count} / ${total} earned`;
+    percentLabel.textContent = `${percent}% complete`;
+    countLabel.textContent = String(count).padStart(2, '0');
     fill.style.width = `${percent}%`;
     fill.parentElement.setAttribute('aria-valuenow', String(count));
   }
 
-  window.TrophyUI = {
-    filters,
-    renderFilterTabs,
-    renderChecklist,
-    renderDetail,
-    renderRoadmap,
-    renderProgress,
-  };
+  window.GuideView = { filters, filterBar, checklist, detail, roadmap, progress };
 })();
