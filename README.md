@@ -1,5 +1,11 @@
 # Vice City Field Notes
 
+[![make.fun · gta6-trophy-guide-01](https://make.fun/badge/gta6-trophy-guide-01.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![rank](https://make.fun/badge/gta6-trophy-guide-01/Kendisamar01/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+[![reward](https://make.fun/badge/gta6-trophy-guide-01/Kendisamar01/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+
+[Bounty page](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
+
 A self-contained web page for tracking a made-up set of GTA VI trophies. The 70 entries live in the repo as data; each has a title, a grade, a category, a requirement, an estimated rarity, and an optional tip that stays hidden until you ask for it. Checking entries off updates a completion meter, and the resulting log is kept in the browser or moved between devices as a JSON file. Every name and requirement is invented for this project, so treat the guide as fiction rather than a source of facts about Rockstar's game.
 
 Entry on [make.fun](https://make.fun/bounty/gta6-trophy-guide-01) · [leaderboard](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard)
